@@ -1,0 +1,160 @@
+\documentclass{hznu-thesis}
+
+\classification{TP39}
+\udc{}
+\schoolcode{10347}
+\secretlevel{公开}
+
+\title{嵌入工程教育的计算能力及其培养模式研究}
+\entitle{Computing Competence and Its Training Model Embedded in Engineering Education}
+\author{张三}
+\studentid{2026000000}
+\supervisor{李四 教授}
+\degreetype{专业学位}
+\major{计算机技术}
+\researchfield{智能信息处理}
+\college{信息工程学院}
+\submitdate{2026 年 4 月}
+
+\begin{document}
+
+\makecover
+\makedeclaration
+
+\frontmatter
+
+\begin{cnabstract}
+摘要的撰写应符合《文献摘要编写规则》（GB/T 6447）的规定。中文摘要字数一般为300字至1000字。摘要应说明研究目的、方法、结果和结论，突出论文的新见解和主要贡献。
+
+本文围绕工程教育场景中的计算能力培养问题，分析现有课程体系、项目实践和评价方式之间的关系，构建面向能力达成的培养模式，并通过教学案例验证其有效性。
+
+\cnkeywords{材质检索；材质优化；三维重建；深度学习}
+\end{cnabstract}
+
+\begin{enabstract}
+The English abstract should correspond to the Chinese abstract. It should describe the purpose, methods, results and conclusions of the research with concise and accurate wording, and highlight the major findings of the thesis.
+
+This thesis studies computing competence in engineering education, proposes a training model based on outcome-oriented practice, and validates the model through teaching cases.
+
+\enkeywords{Material Retrieval; Material Optimization; 3D Reconstruction; Deep Learning}
+\end{enabstract}
+
+\tableofcontents
+\clearpage
+\makefigureslist
+\maketableslist
+
+\begin{abbreviations}
+SEM & Scanning Electron Microscope & 扫描电镜\\
+TEM & Transmission Electron Microscope & 透射电镜\\
+GFAP & Glial Fibrillary Acidic Protein & 胶质纤维酸性蛋白\\
+\end{abbreviations}
+
+\mainmatter
+
+\chapter{绪论}
+根据需要，作者也可将此部分命名为“引言”。该部分包含研究背景及意义、国内外研究现状分析、研究内容以及章节结构安排。
+
+\section{研究背景及意义}
+正文内容格式为中文宋体、英文及数字 Times New Roman、小四号、两端对齐、首行缩进2个字符、1.5倍行距。论文正文中的引用可采用顺序编码制，例如文献\cite{ma2018review,chen2022tensorf}。
+
+\section{国内外研究现状分析}
+国内外研究现状应与相关历史回顾、前人工作评论和理论分析相结合。
+
+\subsection{三级标题}
+三级标题左起顶格，标号后空2格，小四号，加粗，1.5倍行距。
+
+\section{研究内容}
+研究内容、技术路线、创新点等可在本节展开。
+
+\section{组织结构}
+从第二章起，可依次介绍各章内容。
+
+\chapter{主体}
+\section{正文相关要求}
+正文部分通常包括引言、主体和结论。主体应实事求是、客观真切、准备完备、合乎逻辑、层次分明、简练可读。
+
+\section{页面设置与打印要求}
+论文页边距设置为上、下2.54cm，左、右3.17cm。页眉上边距设置为1.5cm，页脚下边距设置为1.75cm。
+
+\section{本章小结}
+本章小结是对该章研究的浓缩提炼，可以包含完成的关键工作与方法、提炼的研究结果和规律。
+
+\chapter{文献标注}
+\section{引用单篇文献的顺序编码规则}
+顺序编码制在正文中用方括号标注引用序号，例如德国学者相关研究可写作“已有研究表明……\cite{wu2012math}”。
+
+\section{引用多篇文献的顺序编码规则}
+引用多篇文献时，可写作“相关研究已有较多讨论\cite{ma2018review,chen2022tensorf}”。
+
+\chapter{图表、公式格式}
+\section{图的格式}
+图应具有自明性，随文出现。图号按章顺序编排，如图\ref{fig:logo-example}。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=2.5cm]{pics/logo.pdf}
+  \caption{之前空2格，宋体五号字体}
+  \label{fig:logo-example}
+\end{figure}
+
+\section{表的格式}
+表应具有自明性，随文出现。表题用宋体五号字体，放在表的上方。三线表可使用 \texttt{booktabs}，如表\ref{tab:analysis}。
+
+\begin{table}[htbp]
+  \centering
+  \caption{废盐成分分析表}
+  \label{tab:analysis}
+  \begin{tabular}{ccccc}
+    \toprule
+    总氮（\%） & 热值（kJ/kg） & 有机氟（\%） & 氯离子（\%） & 钠离子（\%）\\
+    \midrule
+    0.19 & 119 & 0.01 & 58.19 & 40.14\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{公式的格式}
+公式应另起一行，居中编排，编号按章顺序编排并右对齐，如式\eqref{eq:sample}。
+\begin{equation}
+  y = Wx + b
+  \label{eq:sample}
+\end{equation}
+其中，$W$ 为权重矩阵，$b$ 为偏置项。
+
+\chapter{总结与展望}
+\section{工作总结}
+本节总结全文的主要工作、研究结论和创新点。
+
+\section{工作展望}
+本节说明研究工作的局限，并提出未来工作的意见或建议。
+
+\backmatter
+
+\bibliography{references}
+
+\beginappendices
+\chapter{补充材料}
+附录作为主体部分的补充，根据需要添加，并依顺序用大写字母 A、B、C 编序号。
+
+\resumechapter
+\noindent\textbf{教育经历}
+
+2018年9月至2022年6月在某大学计算机科学与技术专业学习并获得学士学位。
+
+2022年9月至今就读于湖州师范大学信息工程学院，攻读硕士学位。
+
+\noindent\textbf{在学期间取得的创新性成果}
+
+\noindent\textbf{学术论文}
+
+张三. 示例论文题名[J]. 示例期刊, 2026, 1(1): 1-10.（发表）
+
+\acknowledgements
+致谢主要感谢对学位论文的编写或相关工作的开展给予帮助的组织和个人。致谢应实事求是，切忌浮夸与庸俗之辞。
+
+\begin{flushright}
+2026年4月
+\end{flushright}
+
+\end{document}
