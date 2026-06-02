@@ -57,6 +57,11 @@
   ItalicFont=timesi.ttf,
   BoldItalicFont=timesbi.ttf
 ]{Times New Roman}
+\newfontfamily\hznusonglatin[
+  Path=fonts/,
+  FontIndex=0,
+  AutoFakeBold=2.5
+]{simsun.ttc}
 
 \setCJKmainfont[
   Path=fonts/,
@@ -66,6 +71,7 @@
   ItalicFont=simkai.ttf
 ]{SimSun}
 \setCJKfamilyfont{hznusong}[Path=fonts/,FontIndex=0,BoldFont=simhei.ttf,ItalicFont=simkai.ttf]{simsun.ttc}
+\setCJKfamilyfont{hznusongfakebold}[Path=fonts/,FontIndex=0,AutoFakeBold=2.5]{simsun.ttc}
 \setCJKfamilyfont{hznuhei}[Path=fonts/,AutoFakeBold=2.5]{simhei.ttf}
 \setCJKfamilyfont{hznukai}[Path=fonts/,AutoFakeBold=2.5]{simkai.ttf}
 \setCJKfamilyfont{hznufang}[Path=fonts/,AutoFakeBold=2.5]{simfang.ttf}
@@ -78,6 +84,7 @@
 \renewcommand{\heiti}{\CJKfamily{hznuhei}}
 \renewcommand{\kaishu}{\CJKfamily{hznukai}}
 \renewcommand{\fangsong}{\CJKfamily{hznufang}}
+\newcommand{\songticu}{\CJKfamily{hznusongfakebold}}
 
 \newcommand{\hznu@classification}{TP39}
 \newcommand{\hznu@udc}{}
@@ -101,11 +108,12 @@
 \newcommand{\hznusectionfont}{\songti\bfseries\zihao{4}}
 \newcommand{\hznusubsectionfont}{\songti\bfseries\zihao{-4}}
 \newcommand{\hznucaptionfont}{\songti\zihao{5}}
-\newcommand{\hznucovermetafont}{\heiti\zihao{-4}}
+\newcommand{\hznucovermetafont}{\hznusonglatin\songticu\zihao{-4}}
 \newcommand{\hznucoverthesisfont}{\kaishu\bfseries\fontsize{32bp}{38bp}\selectfont}
 \newcommand{\hznucovertitlefont}{\heiti\bfseries\fontsize{18bp}{24bp}\selectfont}
 \newcommand{\hznucoverentitlefont}{\hznutimes\bfseries\fontsize{16bp}{20bp}\selectfont}
 \newcommand{\hznucoverinfofont}{\kaishu\zihao{3}}
+\newcommand{\hznucoverlabelfont}{\kaishu\bfseries\zihao{3}}
 \newcommand{\hznucnabstractfont}{\songti\zihao{-4}\setstretch{1.5}}
 \newcommand{\hznuenabstractfont}{\hznutimes\zihao{-4}\setstretch{1.5}}
 
@@ -163,13 +171,22 @@
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-\renewcommand{\cftchapfont}{\songti\bfseries\zihao{-4}}
+\renewcommand{\cftchapfont}{\songticu\zihao{-4}}
 \renewcommand{\cftchappagefont}{\hznutimes\bfseries\zihao{-4}}
 \renewcommand{\cftsecfont}{\songti\zihao{-4}}
 \renewcommand{\cftsecpagefont}{\hznutimes\zihao{-4}}
 \renewcommand{\cftsubsecfont}{\songti\zihao{-4}}
 \renewcommand{\cftsubsecpagefont}{\hznutimes\zihao{-4}}
+\renewcommand{\cftdotsep}{0.6}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cfttoctitlefont}{\hfill\heiti\bfseries\zihao{-3}}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\heiti\bfseries\zihao{-3}}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\heiti\bfseries\zihao{-3}}
+\renewcommand{\cftafterlottitle}{\hfill}
 \setlength{\cftbeforechapskip}{0pt}
 \setlength{\cftbeforesecskip}{0pt}
 \setlength{\cftbeforesubsecskip}{0pt}
@@ -215,59 +232,59 @@
 
 \makeatletter
 \renewcommand{\frontmatter}{%
-  \cleardoublepage
+  \clearpage
   \@mainmatterfalse
   \pagenumbering{Roman}%
   \pagestyle{hznu@front}%
   \let\ps@plain\ps@hznu@front
 }
 \renewcommand{\mainmatter}{%
-  \cleardoublepage
+  \clearpage
   \@mainmattertrue
   \pagenumbering{arabic}%
   \pagestyle{hznu@main}%
   \let\ps@plain\ps@hznu@main
 }
 \renewcommand{\backmatter}{%
-  \cleardoublepage
+  \clearpage
   \@mainmatterfalse
   \pagestyle{hznu@main}%
   \let\ps@plain\ps@hznu@main
 }
 
 \newcommand{\hznu@coverline}[2]{%
-  \makebox[3.6cm][l]{\heiti #1} &
-  \makebox[7.9cm][c]{\kaishu #2}\\[-0.55ex]\cline{2-2}\\[-0.1ex]
+  \makebox[3.0cm][l]{{\hznucoverlabelfont #1}} &
+  \makebox[8.5cm][c]{{\hznucoverinfofont #2}}\\[-0.55ex]\cline{2-2}\\[-0.1ex]
 }
 
 \newcommand{\makecover}{%
-  \cleardoublepage
+  \clearpage
   \begin{titlepage}
     \thispagestyle{empty}
     \songti\setstretch{1}
     \noindent
     \begin{minipage}[t]{0.47\textwidth}
       \hznucovermetafont
-      中图分类号：\underline{\makebox[2.2cm][c]{\hznutimes\hznu@classification}}\par
+      中图分类号：\underline{\makebox[2.2cm][c]{\hznu@classification}}\par
       \vspace{0.7em}
-      UDC 分类号：\underline{\makebox[2.2cm][c]{\hznutimes\hznu@udc}}
+      UDC 分类号：\underline{\makebox[2.2cm][c]{\hznu@udc}}
     \end{minipage}\hfill
     \begin{minipage}[t]{0.39\textwidth}
       \hznucovermetafont
-      学校代码：\underline{\makebox[2.2cm][c]{\hznutimes\hznu@schoolcode}}\par
+      学校代码：\underline{\makebox[2.2cm][c]{\hznu@schoolcode}}\par
       \vspace{0.7em}
-      密\quad 级：\underline{\makebox[2.2cm][c]{\hznu@secretlevel}}
+      密\qquad 级：\underline{\makebox[2.2cm][c]{\hznu@secretlevel}}
     \end{minipage}
 
     \vspace{1.2cm}
     \begin{center}
       \includegraphics[width=7.4cm]{\hznu@schoolnamepic}\par
       \vspace{0.55cm}
-      {\hznucoverthesisfont 硕\quad 士\quad 学\quad 位\quad 论\quad 文}\par
+      {\hznucoverthesisfont 硕\;\;士\;\;学\;\;位\;\;论\;\;文}\par
       \vspace{0.75cm}
       \includegraphics[width=2.25cm]{\hznu@logopic}\par
       \vspace{1.7cm}
-      \begin{minipage}{0.88\textwidth}
+      \begin{minipage}{\textwidth}
         \setlength{\emergencystretch}{2em}
         \centering
         {\hznucovertitlefont \hznu@title\par}
@@ -281,7 +298,7 @@
     \vfill
     \begin{center}
       {\hznucoverinfofont
-      \begin{tabular}{@{}p{3.6cm}@{}p{7.9cm}@{}}
+      \begin{tabular}{@{}p{3.0cm}@{}p{8.5cm}@{}}
         \hznu@coverline{论文作者：}{\hznu@author}
         \hznu@coverline{学\qquad 号：}{\hznutimes\hznu@studentid}
         \hznu@coverline{指导教师：}{\hznu@supervisor}
@@ -297,24 +314,27 @@
 }
 
 \newcommand{\makedeclaration}{%
-  \cleardoublepage
+  \clearpage
   \thispagestyle{empty}
   \hznubodyfont
   \begin{center}
     {\bfseries\zihao{3}湖州师范大学学位论文原创性声明}
   \end{center}
   \vspace{1em}
-  本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，也不包含为获得\textbf{湖州师范大学}或其他教育机构的学位或证书而使用过的材料。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示谢意。
 
-  \vspace{2em}
-  \noindent\makebox[0.48\textwidth][l]{论文作者签名：}
-  \makebox[0.48\textwidth][l]{签字日期：\quad 年\quad 月\quad 日}
+  本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，也不包含为获得\underline{\textbf{湖州师范大学}}或其他教育机构的学位或证书而使用过的材料。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示谢意。
 
-  \vspace{2.2em}
+  \vspace{4em}
+  \noindent\makebox[0.48\textwidth][l]{\textbf{论文作者签名：}}
+  \makebox[0.48\textwidth][l]{\textbf{签字日期：}\quad 年\quad 月\quad 日}
+
+  \vspace{8em}
   \begin{center}
     {\bfseries\zihao{3}湖州师范大学学位论文版权使用授权书}
   \end{center}
-  本学位论文作者完全了解\textbf{湖州师范大学}有权保留并向国家有关部门或机构送交本论文的复印件和磁盘，允许论文被查阅和借阅。本人授权\textbf{湖州师范大学}可以将学位论文的全部或部分内容编入有关数据库进行检索和传播，可以采用影印、缩印或扫描等复制手段保存、汇编学位论文。
+
+  本学位论文作者完全了解\underline{\textbf{湖州师范大学}}有权保留并向国家有关部门或机构送交本论文的复印件和磁盘，允许论文被查阅和借阅。本人授权\underline{\textbf{湖州师范大学}}
+  可以将学位论文的全部或部分内容编入有关数据库进行检索和传播，可以采用影印、缩印或扫描等复制手段保存、汇编学位论文。
 
   本学位论文属于（请在以下相应方框内打“√”）
 
@@ -322,12 +342,12 @@
 
   \noindent\hspace*{2em}$\square$ 不保密。
 
-  \vspace{2em}
-  \noindent\makebox[0.48\textwidth][l]{论文作者签名：}
-  \makebox[0.48\textwidth][l]{指导教师签名：}
+  \vspace{4em}
+  \noindent\makebox[0.48\textwidth][l]{\textbf{论文作者签名：}}
+  \makebox[0.48\textwidth][l]{\textbf{指导教师签名：}}
 
-  \noindent\makebox[0.48\textwidth][l]{签字日期：\quad 年\quad 月\quad 日}
-  \makebox[0.48\textwidth][l]{签字日期：\quad 年\quad 月\quad 日}
+  \noindent\makebox[0.48\textwidth][l]{\textbf{签字日期：}\quad 年\quad 月\quad 日}
+  \makebox[0.48\textwidth][l]{\textbf{签字日期：}\quad 年\quad 月\quad 日}
   \clearpage
 }
 
@@ -378,14 +398,14 @@
 }
 
 \newcommand{\makefigureslist}{%
-  \cleardoublepage
+  \clearpage
   \phantomsection
   \addcontentsline{toc}{chapter}{插图清单}
   \listoffigures
   \clearpage
 }
 \newcommand{\maketableslist}{%
-  \cleardoublepage
+  \clearpage
   \phantomsection
   \addcontentsline{toc}{chapter}{附表清单}
   \listoftables
