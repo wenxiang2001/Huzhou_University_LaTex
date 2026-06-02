@@ -183,10 +183,10 @@
 \renewcommand{\cftsubsecpagefont}{\hznutimes\zihao{-4}}
 \renewcommand{\cftdotsep}{0.6}
 \newcommand{\hznulightdotfill}{%
-  \leaders\hbox{\hskip 0.12em{\textcolor{black!58}{\normalfont\zihao{-4}.}}\hskip 0.12em}\hfill
+  \leaders\hbox{\hskip 0.005em{\textcolor{black!82}{\normalfont\scalebox{1.18}{.}}}\hskip 0.06em}\hfill
 }
 \newcommand{\hznutocdarkdotfill}{%
-  \leaders\hbox{\hskip 0.12em{\textcolor{black!78}{\normalfont\zihao{-4}.}}\hskip 0.12em}\hfill
+  \leaders\hbox{\hskip 0.005em{\textcolor{black!90}{\normalfont\bfseries\scalebox{1.28}{.}}}\hskip 0.06em}\hfill
 }
 \renewcommand{\cftchapleader}{\hznutocdarkdotfill}
 \renewcommand{\cftsecleader}{\hznulightdotfill}
