@@ -24,6 +24,7 @@
 \RequirePackage{tocloft}
 \RequirePackage{fancyhdr}
 \RequirePackage{enumitem}
+\RequirePackage{etoolbox}
 \RequirePackage[numbers,sort&compress]{natbib}
 \RequirePackage[hidelinks]{hyperref}
 \pdfstringdefDisableCommands{%
@@ -71,7 +72,7 @@
   ItalicFont=simkai.ttf
 ]{SimSun}
 \setCJKfamilyfont{hznusong}[Path=fonts/,FontIndex=0,BoldFont=simhei.ttf,ItalicFont=simkai.ttf]{simsun.ttc}
-\setCJKfamilyfont{hznusongfakebold}[Path=fonts/,FontIndex=0,AutoFakeBold=2.5]{simsun.ttc}
+\setCJKfamilyfont{hznusongfakebold}[Path=fonts/,FontIndex=0,AutoFakeBold=3.0]{simsun.ttc}
 \setCJKfamilyfont{hznuhei}[Path=fonts/,AutoFakeBold=2.5]{simhei.ttf}
 \setCJKfamilyfont{hznukai}[Path=fonts/,AutoFakeBold=2.5]{simkai.ttf}
 \setCJKfamilyfont{hznufang}[Path=fonts/,AutoFakeBold=2.5]{simfang.ttf}
@@ -103,19 +104,21 @@
 \newcommand{\hznu@schoolnamepic}{pics/school-name.pdf}
 \newcommand{\hznu@logopic}{pics/logo.pdf}
 
-\newcommand{\hznubodyfont}{\songti\zihao{-4}\setstretch{1.5}}
+\newcommand{\hznulinefactor}{1.65}
+\newcommand{\hznubodyfont}{\songti\zihao{-4}\setstretch{\hznulinefactor}}
 \newcommand{\hznuchapterfont}{\heiti\bfseries\zihao{-3}}
-\newcommand{\hznusectionfont}{\songti\bfseries\zihao{4}}
-\newcommand{\hznusubsectionfont}{\songti\bfseries\zihao{-4}}
+\newcommand{\hznusectionfont}{\hznutimes\bfseries\songticu\zihao{4}}
+\newcommand{\hznusubsectionfont}{\hznutimes\bfseries\songticu\zihao{-4}}
 \newcommand{\hznucaptionfont}{\songti\zihao{5}}
+\newcommand{\hznutocchapterfont}{\hznutimes\bfseries\songticu\zihao{-4}}
 \newcommand{\hznucovermetafont}{\hznusonglatin\songticu\zihao{-4}}
 \newcommand{\hznucoverthesisfont}{\kaishu\bfseries\fontsize{32bp}{38bp}\selectfont}
 \newcommand{\hznucovertitlefont}{\heiti\bfseries\fontsize{18bp}{24bp}\selectfont}
 \newcommand{\hznucoverentitlefont}{\hznutimes\bfseries\fontsize{16bp}{20bp}\selectfont}
 \newcommand{\hznucoverinfofont}{\kaishu\zihao{3}}
 \newcommand{\hznucoverlabelfont}{\kaishu\bfseries\zihao{3}}
-\newcommand{\hznucnabstractfont}{\songti\zihao{-4}\setstretch{1.5}}
-\newcommand{\hznuenabstractfont}{\hznutimes\zihao{-4}\setstretch{1.5}}
+\newcommand{\hznucnabstractfont}{\songti\zihao{-4}\setstretch{\hznulinefactor}}
+\newcommand{\hznuenabstractfont}{\hznutimes\zihao{-4}\setstretch{\hznulinefactor}}
 
 \renewcommand{\title}[1]{\gdef\hznu@title{#1}\hypersetup{pdftitle={#1}}}
 \renewcommand{\author}[1]{\gdef\hznu@author{#1}\hypersetup{pdfauthor={#1}}}
@@ -143,20 +146,20 @@
     name={,},
     number=\arabic{chapter},
     format=\centering\hznuchapterfont,
-    aftername=\quad\quad,
+    aftername=\hspace{1em},
     beforeskip=1.0\baselineskip,
     afterskip=1.0\baselineskip,
     fixskip=true
   },
   section={
     format=\raggedright\hznusectionfont,
-    aftername=\quad\quad,
+    aftername=\hspace{1em},
     beforeskip=0.5\baselineskip,
     afterskip=0.1\baselineskip
   },
   subsection={
     format=\raggedright\hznusubsectionfont,
-    aftername=\quad\quad,
+    aftername=\hspace{1em},
     beforeskip=0.35\baselineskip,
     afterskip=0.1\baselineskip
   }
@@ -171,7 +174,7 @@
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-\renewcommand{\cftchapfont}{\songticu\zihao{-4}}
+\renewcommand{\cftchapfont}{\hznutocchapterfont}
 \renewcommand{\cftchappagefont}{\hznutimes\bfseries\zihao{-4}}
 \renewcommand{\cftsecfont}{\songti\zihao{-4}}
 \renewcommand{\cftsecpagefont}{\hznutimes\zihao{-4}}
@@ -187,9 +190,19 @@
 \renewcommand{\cftafterloftitle}{\hfill}
 \renewcommand{\cftlottitlefont}{\hfill\heiti\bfseries\zihao{-3}}
 \renewcommand{\cftafterlottitle}{\hfill}
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{1.0\baselineskip}
+\setlength{\cftbeforeloftitleskip}{0pt}
+\setlength{\cftafterloftitleskip}{1.0\baselineskip}
+\setlength{\cftbeforelottitleskip}{0pt}
+\setlength{\cftafterlottitleskip}{1.0\baselineskip}
 \setlength{\cftbeforechapskip}{0pt}
 \setlength{\cftbeforesecskip}{0pt}
 \setlength{\cftbeforesubsecskip}{0pt}
+\renewcommand{\cftfigpresnum}{图\ }
+\renewcommand{\cfttabpresnum}{表\ }
+\setlength{\cftfignumwidth}{3.5em}
+\setlength{\cfttabnumwidth}{3.5em}
 
 \DeclareCaptionFont{hznucaption}{\hznucaptionfont}
 \captionsetup{
@@ -204,6 +217,11 @@
 \setlength{\heavyrulewidth}{1.5pt}
 \setlength{\lightrulewidth}{0.5pt}
 \setlength{\cmidrulewidth}{0.5pt}
+\setlength{\extrarowheight}{0pt}
+\AtBeginEnvironment{table}{%
+  \songti\zihao{5}\setstretch{1}%
+  \renewcommand{\arraystretch}{2.0}%
+}
 \numberwithin{equation}{chapter}
 
 \setlist{nosep}
@@ -231,6 +249,13 @@
 }
 
 \makeatletter
+\newcommand{\hznu@blankpage}{%
+  \clearpage
+  \thispagestyle{empty}%
+  \null
+  \clearpage
+}
+
 \renewcommand{\frontmatter}{%
   \clearpage
   \@mainmatterfalse
@@ -280,7 +305,7 @@
     \begin{center}
       \includegraphics[width=7.4cm]{\hznu@schoolnamepic}\par
       \vspace{0.55cm}
-      {\hznucoverthesisfont 硕\;\;士\;\;学\;\;位\;\;论\;\;文}\par
+      {\hznucoverthesisfont 硕\;\;\;士\;\;\;学\;\;\;位\;\;\;论\;\;\;文}\par
       \vspace{0.75cm}
       \includegraphics[width=2.25cm]{\hznu@logopic}\par
       \vspace{1.7cm}
@@ -310,7 +335,7 @@
       \end{tabular}}
     \end{center}
   \end{titlepage}
-  \clearpage
+  \hznu@blankpage
 }
 
 \newcommand{\makedeclaration}{%
@@ -348,7 +373,7 @@
 
   \noindent\makebox[0.48\textwidth][l]{\textbf{签字日期：}\quad 年\quad 月\quad 日}
   \makebox[0.48\textwidth][l]{\textbf{签字日期：}\quad 年\quad 月\quad 日}
-  \clearpage
+  \hznu@blankpage
 }
 
 \newcommand{\hznu@frontchapter}[1]{%
