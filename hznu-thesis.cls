@@ -182,12 +182,15 @@
 \renewcommand{\cftsubsecfont}{\songti\zihao{-4}}
 \renewcommand{\cftsubsecpagefont}{\hznutimes\zihao{-4}}
 \renewcommand{\cftdotsep}{0.6}
-\newcommand{\hznutocdotfill}{%
-  \leaders\hbox{\hskip 0.22em{\normalfont\bfseries\zihao{4}.}\hskip 0.22em}\hfill
+\newcommand{\hznulightdotfill}{%
+  \leaders\hbox{\hskip 0.12em{\textcolor{black!58}{\normalfont\zihao{-4}.}}\hskip 0.12em}\hfill
 }
-\renewcommand{\cftchapleader}{\hznutocdotfill}
-\renewcommand{\cftsecleader}{\hznutocdotfill}
-\renewcommand{\cftsubsecleader}{\hznutocdotfill}
+\newcommand{\hznutocdarkdotfill}{%
+  \leaders\hbox{\hskip 0.12em{\textcolor{black!78}{\normalfont\zihao{-4}.}}\hskip 0.12em}\hfill
+}
+\renewcommand{\cftchapleader}{\hznutocdarkdotfill}
+\renewcommand{\cftsecleader}{\hznulightdotfill}
+\renewcommand{\cftsubsecleader}{\hznulightdotfill}
 \renewcommand{\cfttoctitlefont}{\hfill\heiti\bfseries\zihao{-3}}
 \renewcommand{\cftaftertoctitle}{\hfill}
 \renewcommand{\cftloftitlefont}{\hfill\heiti\bfseries\zihao{-3}}
@@ -205,8 +208,8 @@
 \setlength{\cftbeforesubsecskip}{0pt}
 \renewcommand{\cftfigpresnum}{图\ }
 \renewcommand{\cfttabpresnum}{表\ }
-\renewcommand{\cftfigleader}{\cftdotfill{4.5}}
-\renewcommand{\cfttableader}{\cftdotfill{4.5}}
+\renewcommand{\cftfigleader}{\hznulightdotfill}
+\renewcommand{\cfttableader}{\hznulightdotfill}
 \setlength{\cftfignumwidth}{3.5em}
 \setlength{\cfttabnumwidth}{3.5em}
 
