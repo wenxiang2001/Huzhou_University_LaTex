@@ -23,9 +23,10 @@
 \RequirePackage{subcaption}
 \RequirePackage{tocloft}
 \RequirePackage{fancyhdr}
+\RequirePackage{xcolor}
 \RequirePackage{enumitem}
 \RequirePackage{etoolbox}
-\RequirePackage[numbers,sort&compress]{natbib}
+\RequirePackage[numbers,sort&compress,super]{natbib}
 \RequirePackage[hidelinks]{hyperref}
 \pdfstringdefDisableCommands{%
   \def\quad{ }%
@@ -38,7 +39,7 @@
   bottom=2.54cm,
   left=3.17cm,
   right=3.17cm,
-  headheight=14pt,
+  headheight=15pt,
   headsep=0.62cm,
   footskip=0.79cm
 }
@@ -181,9 +182,12 @@
 \renewcommand{\cftsubsecfont}{\songti\zihao{-4}}
 \renewcommand{\cftsubsecpagefont}{\hznutimes\zihao{-4}}
 \renewcommand{\cftdotsep}{0.6}
-\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\newcommand{\hznutocdotfill}{%
+  \leaders\hbox{\hskip 0.22em{\normalfont\bfseries\zihao{4}.}\hskip 0.22em}\hfill
+}
+\renewcommand{\cftchapleader}{\hznutocdotfill}
+\renewcommand{\cftsecleader}{\hznutocdotfill}
+\renewcommand{\cftsubsecleader}{\hznutocdotfill}
 \renewcommand{\cfttoctitlefont}{\hfill\heiti\bfseries\zihao{-3}}
 \renewcommand{\cftaftertoctitle}{\hfill}
 \renewcommand{\cftloftitlefont}{\hfill\heiti\bfseries\zihao{-3}}
@@ -201,6 +205,8 @@
 \setlength{\cftbeforesubsecskip}{0pt}
 \renewcommand{\cftfigpresnum}{图\ }
 \renewcommand{\cfttabpresnum}{表\ }
+\renewcommand{\cftfigleader}{\cftdotfill{4.5}}
+\renewcommand{\cfttableader}{\cftdotfill{4.5}}
 \setlength{\cftfignumwidth}{3.5em}
 \setlength{\cfttabnumwidth}{3.5em}
 
@@ -219,8 +225,17 @@
 \setlength{\cmidrulewidth}{0.5pt}
 \setlength{\extrarowheight}{0pt}
 \AtBeginEnvironment{table}{%
-  \songti\zihao{5}\setstretch{1}%
+  \songti\zihao{-4}\setstretch{1}%
   \renewcommand{\arraystretch}{2.0}%
+}
+\newsavebox{\hznu@threelinebox}
+\newenvironment{hznuthreelinetable}[1]{%
+  \begin{lrbox}{\hznu@threelinebox}%
+  \begin{tabular*}{1.06\textwidth}{@{\extracolsep{\fill}}#1@{}}
+}{%
+  \end{tabular*}%
+  \end{lrbox}%
+  \makebox[\textwidth][c]{\usebox{\hznu@threelinebox}}%
 }
 \numberwithin{equation}{chapter}
 
@@ -236,10 +251,14 @@
 }
 \fancypagestyle{hznu@main}{
   \fancyhf{}
-  \fancyhead[CO]{\songti\zihao{5}湖州师范大学硕士学位论文}
-  \fancyhead[CE]{\songti\zihao{5}\hznu@title}
+  \fancyhead[CO]{\textcolor{black!55}{\songti\zihao{5}湖州师范大学硕士学位论文}}
+  \fancyhead[CE]{\textcolor{black!55}{\songti\zihao{5}\hznu@title}}
   \fancyfoot[C]{\hznutimes\zihao{5}\textemdash\ \thepage\ \textemdash}
   \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\headrule}{%
+    {\color{black!45}\hrule width\headwidth height\headrulewidth}%
+    \vskip-\headrulewidth
+  }
   \renewcommand{\footrulewidth}{0pt}
 }
 \fancypagestyle{hznu@empty}{
@@ -405,15 +424,18 @@
 \newenvironment{abbreviations}{%
   \hznu@frontchapter{缩略词表}%
   \songti\zihao{-4}\setstretch{1}%
+  \renewcommand{\arraystretch}{2.0}%
+  \setlength{\LTleft}{-0.03\textwidth}%
+  \setlength{\LTright}{-0.03\textwidth}%
   \setlength{\LTpre}{0pt}%
   \setlength{\LTpost}{0pt}%
-  \begin{longtable}{>{\hznutimes}p{0.18\textwidth}p{0.43\textwidth}p{0.28\textwidth}}
+  \begin{longtable}{@{}>{\hznutimes}p{0.22\textwidth}>{\hznutimes}p{0.47\textwidth}>{\songti}p{0.31\textwidth}@{}}
   \toprule
-  \textbf{缩略词} & \textbf{英文全称} & \textbf{中文全称}\\
+  {\songti\textbf{缩略词}} & {\songti\textbf{英文全称}} & {\songti\textbf{中文全称}}\\
   \midrule
   \endfirsthead
   \toprule
-  \textbf{缩略词} & \textbf{英文全称} & \textbf{中文全称}\\
+  {\songti\textbf{缩略词}} & {\songti\textbf{英文全称}} & {\songti\textbf{中文全称}}\\
   \midrule
   \endhead
 }{%
