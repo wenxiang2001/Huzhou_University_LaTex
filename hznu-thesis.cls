@@ -78,7 +78,7 @@
 ]{SimSun}
 \setCJKfamilyfont{hznusong}[Path=fonts/,FontIndex=0,AutoFakeBold=\hznusongboldfactor,ItalicFont=simkai.ttf]{simsun.ttc}
 \setCJKfamilyfont{hznuhei}[Path=fonts/,AutoFakeBold=2.5]{simhei.ttf}
-\setCJKfamilyfont{hznukai}[Path=fonts/,AutoFakeBold=2.5]{simkai.ttf}
+\setCJKfamilyfont{hznukai}[Path=fonts/,AutoFakeBold=4.0]{simkai.ttf}
 \setCJKfamilyfont{hznufang}[Path=fonts/,AutoFakeBold=2.5]{simfang.ttf}
 \setCJKmonofont[Path=fonts/,FontIndex=0]{simsun.ttc}
 \providecommand{\songti}{}
@@ -362,18 +362,15 @@
       \vspace{0.75cm}
       \includegraphics[width=2.25cm]{\hznu@logopic}\par
       \vspace{1.7cm}
-      \begingroup
-      \setlength{\arrayrulewidth}{0.75pt}%
-      \setlength{\tabcolsep}{6pt}%
-      \renewcommand{\arraystretch}{1.18}%
-      \begin{tabular}{|>{\centering\arraybackslash}p{\dimexpr\textwidth-2\tabcolsep-2\arrayrulewidth\relax}|}
-        \hline
-        {\hznucovertitlefont \hznu@title}\\
-        \hline
-        {\hznucoverentitlefont \hznu@entitle}\\
-        \hline
-      \end{tabular}
-      \endgroup
+      \begin{minipage}{\textwidth}
+        \setlength{\emergencystretch}{2em}
+        \centering
+        {\hznucovertitlefont \hznu@title\par}
+        \vspace{0.2em}\hrule height 0.75pt
+        \vspace{0.28em}
+        {\hznucoverentitlefont \hznu@entitle\par}
+        \vspace{0.18em}\hrule height 0.75pt
+      \end{minipage}
     \end{center}
 
     \vfill
