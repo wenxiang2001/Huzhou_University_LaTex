@@ -123,6 +123,7 @@
 \newcommand{\hznucoverlabelfont}{\kaishu\bfseries\zihao{3}}
 \newcommand{\hznucnabstractfont}{\songti\zihao{-4}\setstretch{\hznulinefactor}}
 \newcommand{\hznuenabstractfont}{\hznutimes\zihao{-4}\setstretch{\hznulinefactor}}
+\newcommand{\hznutablefont}{\songti\zihao{5}\setstretch{1}}
 
 \renewcommand{\title}[1]{\gdef\hznu@title{#1}\hypersetup{pdftitle={#1}}}
 \renewcommand{\author}[1]{\gdef\hznu@author{#1}\hypersetup{pdfauthor={#1}}}
@@ -231,7 +232,7 @@
 \setlength{\cmidrulewidth}{0.5pt}
 \setlength{\extrarowheight}{0pt}
 \AtBeginEnvironment{table}{%
-  \songti\zihao{-4}\setstretch{1}%
+  \hznutablefont
   \renewcommand{\arraystretch}{2.0}%
 }
 \newsavebox{\hznu@threelinebox}
@@ -242,6 +243,33 @@
   \end{tabular*}%
   \end{lrbox}%
   \noindent\makebox[\textwidth][c]{\usebox{\hznu@threelinebox}}%
+}
+\newenvironment{hznulongthreelinetable}[4]{%
+  \begingroup
+  \hznutablefont
+  \renewcommand{\arraystretch}{2.0}%
+  \setlength{\LTleft}{0pt plus 1fill}%
+  \setlength{\LTright}{0pt plus 1fill}%
+  \setlength{\LTpre}{0pt}%
+  \setlength{\LTpost}{0pt}%
+  \begin{longtable}{@{}#3@{}}
+  \caption{#1}\label{#2}\\
+  \toprule
+  #4\\
+  \midrule
+  \endfirsthead
+  \caption[]{（续）}\\
+  \toprule
+  #4\\
+  \midrule
+  \endhead
+  \bottomrule
+  \endfoot
+  \bottomrule
+  \endlastfoot
+}{%
+  \end{longtable}%
+  \endgroup
 }
 \numberwithin{equation}{chapter}
 
@@ -334,15 +362,18 @@
       \vspace{0.75cm}
       \includegraphics[width=2.25cm]{\hznu@logopic}\par
       \vspace{1.7cm}
-      \begin{minipage}{\textwidth}
-        \setlength{\emergencystretch}{2em}
-        \centering
-        {\hznucovertitlefont \hznu@title\par}
-        \vspace{0.2em}\hrule height 0.75pt
-        \vspace{0.28em}
-        {\hznucoverentitlefont \hznu@entitle\par}
-        \vspace{0.18em}\hrule height 0.75pt
-      \end{minipage}
+      \begingroup
+      \setlength{\arrayrulewidth}{0.75pt}%
+      \setlength{\tabcolsep}{6pt}%
+      \renewcommand{\arraystretch}{1.18}%
+      \begin{tabular}{|>{\centering\arraybackslash}p{\dimexpr\textwidth-2\tabcolsep-2\arrayrulewidth\relax}|}
+        \hline
+        {\hznucovertitlefont \hznu@title}\\
+        \hline
+        {\hznucoverentitlefont \hznu@entitle}\\
+        \hline
+      \end{tabular}
+      \endgroup
     \end{center}
 
     \vfill
@@ -421,7 +452,7 @@
   \par\vspace{1em}\noindent{\heiti 关键词：}{\songti #1}\par
 }
 \newcommand{\enkeywords}[1]{%
-  \par\vspace{1em}{\hznutimes\raggedright\noindent\hspace*{2em}%
+  \par\vspace{1em}{\hznutimes\noindent\hspace*{2em}%
   {\bfseries Key Words: }#1\par}%
 }
 
