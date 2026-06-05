@@ -195,9 +195,35 @@
 \newcommand{\hznutocdarkdotfill}{%
   \leaders\hbox{\hskip 0.005em{\textcolor{black!90}{\normalfont\bfseries\scalebox{1.13}{.}}}\hskip 0.06em}\hfill
 }
+\newcommand{\hznu@tocpagenum}[2]{%
+  \begingroup
+  \setlength{\fboxsep}{0pt}%
+  \makebox[0pt][r]{\colorbox{white}{\hspace{0.05em}#1 #2}}%
+  \endgroup
+}
 \renewcommand{\cftchapleader}{\hznutocdarkdotfill}
 \renewcommand{\cftsecleader}{\hznulightdotfill}
 \renewcommand{\cftsubsecleader}{\hznulightdotfill}
+\renewcommand{\cftchapfillnum}[1]{%
+  {\cftchapleader}\nobreak
+  \hznu@tocpagenum{\cftchappagefont}{#1}\cftchapafterpnum\par
+}
+\renewcommand{\cftsecfillnum}[1]{%
+  {\cftsecleader}\nobreak
+  \hznu@tocpagenum{\cftsecpagefont}{#1}\cftsecafterpnum\par
+}
+\renewcommand{\cftsubsecfillnum}[1]{%
+  {\cftsubsecleader}\nobreak
+  \hznu@tocpagenum{\cftsubsecpagefont}{#1}\cftsubsecafterpnum\par
+}
+\renewcommand{\cftfigfillnum}[1]{%
+  {\cftfigleader}\nobreak
+  \hznu@tocpagenum{\cftfigpagefont}{#1}\cftfigafterpnum\par
+}
+\renewcommand{\cfttabfillnum}[1]{%
+  {\cfttableader}\nobreak
+  \hznu@tocpagenum{\cfttabpagefont}{#1}\cfttabafterpnum\par
+}
 \renewcommand{\cfttoctitlefont}{\hfill\heiti\bfseries\zihao{-3}}
 \renewcommand{\cftaftertoctitle}{\hfill}
 \renewcommand{\cftloftitlefont}{\hfill\heiti\bfseries\zihao{-3}}
