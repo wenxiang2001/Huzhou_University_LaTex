@@ -73,7 +73,7 @@
   ItalicFont=simkai.ttf
 ]{SimSun}
 \setCJKfamilyfont{hznusong}[Path=fonts/,FontIndex=0,BoldFont=simhei.ttf,ItalicFont=simkai.ttf]{simsun.ttc}
-\setCJKfamilyfont{hznusongfakebold}[Path=fonts/,FontIndex=0,AutoFakeBold=3.0]{simsun.ttc}
+\setCJKfamilyfont{hznusongfakebold}[Path=fonts/,FontIndex=0,AutoFakeBold=5.0]{simsun.ttc}
 \setCJKfamilyfont{hznuhei}[Path=fonts/,AutoFakeBold=2.5]{simhei.ttf}
 \setCJKfamilyfont{hznukai}[Path=fonts/,AutoFakeBold=2.5]{simkai.ttf}
 \setCJKfamilyfont{hznufang}[Path=fonts/,AutoFakeBold=2.5]{simfang.ttf}
@@ -238,7 +238,7 @@
 }{%
   \end{tabular*}%
   \end{lrbox}%
-  \makebox[\textwidth][c]{\usebox{\hznu@threelinebox}}%
+  \noindent\makebox[\textwidth][c]{\usebox{\hznu@threelinebox}}%
 }
 \numberwithin{equation}{chapter}
 
@@ -428,22 +428,17 @@
   \hznu@frontchapter{缩略词表}%
   \songti\zihao{-4}\setstretch{1}%
   \renewcommand{\arraystretch}{2.0}%
-  \setlength{\LTleft}{-0.03\textwidth}%
-  \setlength{\LTright}{-0.03\textwidth}%
-  \setlength{\LTpre}{0pt}%
-  \setlength{\LTpost}{0pt}%
-  \begin{longtable}{@{}>{\hznutimes}p{0.22\textwidth}>{\hznutimes}p{0.47\textwidth}>{\songti}p{0.31\textwidth}@{}}
+  \begin{hznuthreelinetable}{%
+    >{\centering\arraybackslash\hznutimes}p{0.18\textwidth}%
+    >{\centering\arraybackslash\hznutimes}p{0.48\textwidth}%
+    >{\centering\arraybackslash\songti}p{0.24\textwidth}%
+  }
   \toprule
-  {\songti\textbf{缩略词}} & {\songti\textbf{英文全称}} & {\songti\textbf{中文全称}}\\
+  {\songticu\bfseries 缩略词} & {\songticu\bfseries 英文全称} & {\songticu\bfseries 中文全称}\\
   \midrule
-  \endfirsthead
-  \toprule
-  {\songti\textbf{缩略词}} & {\songti\textbf{英文全称}} & {\songti\textbf{中文全称}}\\
-  \midrule
-  \endhead
 }{%
   \bottomrule
-  \end{longtable}
+  \end{hznuthreelinetable}
   \clearpage
 }
 
