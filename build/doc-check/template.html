@@ -1,0 +1,1647 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Author" content="YJS">
+  <meta name="LastAuthor" content="zhaomin">
+  <meta name="CreationTime" content="2026-02-14T12:17:00Z">
+  <meta name="ModificationTime" content="2026-02-14T12:17:00Z">
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 23.0px; font: 12.0px Times}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 36.0px Times}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 23.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 24.0px; line-height: 23.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 18.0px Times}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 16.0px 'Times New Roman'}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 16.0px 'Times New Roman'}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 16.0px 'Times New Roman'; min-height: 18.0px}
+    p.p11 {margin: 15.6px 0.0px 0.0px 0.0px; text-align: center; line-height: 23.0px; font: 15.0px Times}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 18.0px; line-height: 23.0px; font: 9.0px Times; min-height: 11.0px}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 26.1px; line-height: 23.0px; font: 12.0px Times}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 26.1px; line-height: 23.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 26.0px; font: 12.0px 'Times New Roman'}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 26.0px; font: 12.0px 'Times New Roman'}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 23.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 23.0px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 23.0px; font: 15.0px Times}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 23.0px; font: 12.0px Times}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 27.0px; line-height: 23.0px; font: 12.0px Times}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 27.0px; line-height: 23.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p23 {margin: 15.6px 0.0px 15.6px 0.0px; text-align: center; line-height: 23.0px; font: 15.0px 'Times New Roman'}
+    p.p24 {margin: 15.6px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.1px; line-height: 23.0px; font: 12.0px Times}
+    p.p25 {margin: 15.6px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 44.0px; line-height: 23.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p26 {margin: 15.6px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 23.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'}
+    p.p28 {margin: 15.6px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.1px; line-height: 23.0px; font: 12.0px 'Times New Roman'}
+    p.p29 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 44.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p30 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 23.0px; font: 12.0px 'Times New Roman'}
+    p.p31 {margin: 0.0px 0.0px 0.0px 24.0px; text-align: justify; line-height: 23.0px; font: 12.0px 'Times New Roman'}
+    p.p32 {margin: 0.0px 0.0px 0.0px 48.0px; text-align: justify; line-height: 23.0px; font: 12.0px 'Times New Roman'}
+    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 23.0px; font: 10.5px 'Times New Roman'; min-height: 11.0px}
+    p.p34 {margin: 15.6px 0.0px 15.6px 0.0px; text-align: center; line-height: 23.0px; font: 15.0px 'Times New Roman'; min-height: 17.0px}
+    p.p35 {margin: 15.6px 0.0px 15.6px 0.0px; text-align: center; line-height: 23.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p36 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 12.0px 'Times New Roman'}
+    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 15.0px; font: 12.0px 'Times New Roman'; color: #000000}
+    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #000000}
+    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 23.0px; font: 14.0px 'Times New Roman'}
+    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #000000}
+    p.p41 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 23.0px; font: 14.0px 'Times New Roman'; color: #000000}
+    p.p42 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 10.0px; line-height: 17.0px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p43 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 17.0px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p44 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 17.0px; font: 12.0px 'Times New Roman'; color: #000000}
+    p.p45 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #ff0000}
+    p.p46 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 21.0px; line-height: 23.0px; font: 10.5px Times; min-height: 13.0px}
+    p.p47 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #0000ff; min-height: 15.0px}
+    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 23.0px; font: 10.5px 'Times New Roman'; color: #000000}
+    p.p49 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 23.0px; font: 10.5px 'Times New Roman'; min-height: 11.0px}
+    p.p50 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 23.0px; font: 10.5px 'Times New Roman'; color: #000000; min-height: 11.0px}
+    p.p51 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 23.0px; font: 10.5px 'Times New Roman'; color: #000000; min-height: 11.0px}
+    p.p52 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 21.0px; line-height: 23.0px; font: 10.5px 'Times New Roman'}
+    p.p53 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 21.0px; line-height: 23.0px; font: 10.5px 'Times New Roman'; color: #ff0000; min-height: 11.0px}
+    p.p54 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 23.0px; font: 10.5px 'Times New Roman'}
+    p.p55 {margin: 3.0px 0.0px 3.0px 0.0px; text-align: center; line-height: 15.0px; font: 10.5px 'Times New Roman'}
+    p.p56 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 23.0px; font: 10.5px Times; color: #000000}
+    p.p57 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 23.0px; font: 10.5px Times; color: #000000; min-height: 13.0px}
+    p.p58 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 24.0px; line-height: 19.0px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p59 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 30.0px; line-height: 19.5px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p60 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #ff0000; min-height: 15.0px}
+    p.p61 {margin: 3.0px 0.0px 3.0px 0.0px; text-align: center; line-height: 11.0px; font: 10.5px 'Times New Roman'}
+    p.p62 {margin: 3.0px 0.0px 3.0px 0.0px; text-align: justify; line-height: 11.0px; font: 10.5px 'Times New Roman'; min-height: 11.0px}
+    p.p63 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 23.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p64 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 23.0px; font: 12.0px Times; color: #ff0000}
+    p.p65 {margin: 3.0px 0.0px 3.0px 0.0px; text-align: center; text-indent: 24.0px; line-height: 15.0px; font: 12.0px 'Times New Roman'}
+    p.p66 {margin: 3.0px 0.0px 3.0px 0.0px; text-align: right; text-indent: 24.0px; line-height: 15.0px; font: 12.0px 'Times New Roman'}
+    p.p67 {margin: 15.6px 0.0px 15.6px 0.0px; text-align: justify; line-height: 23.0px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p68 {margin: 15.6px 0.0px 15.6px 0.0px; text-align: justify; line-height: 23.0px; font: 15.0px 'Times New Roman'; min-height: 17.0px}
+    p.p69 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 10.5px 'Times New Roman'; color: #ff0000}
+    p.p70 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 21.0px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p71 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 21.0px; font: 12.0px 'Times New Roman'}
+    p.p72 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 21.1px; line-height: 15.0px; font: 10.5px 'Times New Roman'; color: #ff0000}
+    p.p73 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 22.0px; line-height: 10.0px; font: 10.5px 'Times New Roman'; color: #ff0000}
+    p.p74 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 20.8px; line-height: 8.0px; font: 10.5px 'Times New Roman'; color: #ff0000}
+    p.p75 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 22.8px; line-height: 10.0px; font: 10.5px 'Times New Roman'; color: #ff0000}
+    p.p76 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 22.4px; line-height: 10.0px; font: 10.5px 'Times New Roman'; color: #ff0000}
+    p.p77 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 20.6px; line-height: 8.0px; font: 10.5px 'Times New Roman'; color: #ff0000}
+    p.p78 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 22.2px; line-height: 10.0px; font: 10.5px 'Times New Roman'; color: #ff0000}
+    p.p79 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 21.0px; line-height: 10.0px; font: 10.5px 'Times New Roman'; color: #ff0000}
+    p.p80 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 21.0px; line-height: 8.0px; font: 10.5px 'Times New Roman'; color: #ff0000}
+    p.p81 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 22.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'}
+    p.p82 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.1px; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #ff0000}
+    p.p83 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 28.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #000000}
+    p.p84 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'}
+    p.p85 {margin: 0.0px 0.0px 0.0px 0.0px; text-indent: 24.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #ff0000}
+    p.p86 {margin: 0.0px 0.0px 0.0px 38.2px; text-align: justify; text-indent: -38.2px; line-height: 23.0px; font: 12.0px 'Times New Roman'}
+    p.p87 {margin: 0.0px 0.0px 0.0px 38.2px; text-align: justify; text-indent: -38.2px; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #333333}
+    p.p88 {margin: 0.0px 0.0px 0.0px 39.1px; text-align: justify; text-indent: -39.1px; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #000000}
+    p.p89 {margin: 0.0px 0.0px 0.0px 38.2px; text-align: justify; text-indent: -38.2px; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #000000}
+    p.p90 {margin: 0.0px 0.0px 0.0px 38.5px; text-align: justify; text-indent: -38.5px; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #000000}
+    p.p91 {margin: 0.0px 0.0px 0.0px 24.2px; text-align: justify; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #000000}
+    p.p92 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #000000; min-height: 15.0px}
+    p.p93 {margin: 0.0px 0.0px 0.0px 24.2px; text-align: justify; text-indent: -24.1px; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #000000}
+    p.p94 {margin: 0.0px 0.0px 0.0px 24.0px; text-align: justify; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #ff0000}
+    p.p95 {margin: 0.0px 0.0px 0.0px 0.0px; text-indent: 24.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p96 {margin: 15.6px 0.0px 15.6px 0.0px; text-align: center; line-height: 23.0px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p97 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 24.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'}
+    p.p98 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 24.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'; color: #0000ff; min-height: 15.0px}
+    p.p99 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 10.5px 'Times New Roman'; min-height: 11.0px}
+    p.p100 {margin: 0.0px 0.0px 0.0px 0.0px; min-height: 14.0px}
+    p.p101 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 10.5px Times; min-height: 13.0px}
+    p.p102 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p103 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 10.5px 'Times New Roman'; min-height: 11.0px}
+    p.p104 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p105 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 10.5px 'Times New Roman'}
+    p.p106 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 10.5px Times}
+    p.p107 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 28.0px; line-height: 23.0px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p108 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 15.0px; font: 11.0px 'Times New Roman'; color: #7030a0}
+    p.p109 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 15.0px; font: 10.5px 'Times New Roman'; color: #7030a0}
+    p.p110 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 23.0px; font: 11.0px 'Times New Roman'; color: #7030a0}
+    span.s1 {text-decoration: underline}
+    span.s2 {font: 16.0px Times}
+    span.s3 {vertical-align: -1.0px}
+    span.s4 {font: 12.0px 'Times New Roman'; vertical-align: -1.0px}
+    span.s5 {font: 12.0px 'Times New Roman'}
+    span.s6 {letter-spacing: -1.9px}
+    span.s7 {font: 15.0px 'Times New Roman'}
+    span.s8 {color: #000000}
+    span.s9 {vertical-align: -17.0px}
+    span.s10 {letter-spacing: 0.8px}
+    span.s11 {letter-spacing: 0.5px}
+    span.s12 {letter-spacing: 0.6px}
+    span.s13 {letter-spacing: 0.7px}
+    span.s14 {letter-spacing: 0.2px}
+    span.s15 {letter-spacing: 0.9px}
+    span.s16 {letter-spacing: -0.1px}
+    span.s17 {letter-spacing: 0.3px}
+    span.s18 {font: 12.0px Times}
+    span.s19 {font: 12.0px Helvetica}
+    span.s20 {font: 11.0px 'Times New Roman'}
+    span.Apple-tab-span {white-space:pre}
+    table.t1 {border-collapse: collapse}
+    td.td1 {min-width: 426.1px; min-height: 38.8px; border-style: solid; border-width: 0.0px 0.0px 1.0px 0.0px; border-color: transparent transparent #bfbfbf transparent; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td2 {min-width: 426.1px; min-height: 41.8px; border-style: solid; border-width: 1.0px 0.0px 1.0px 0.0px; border-color: #bfbfbf transparent #bfbfbf transparent; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td3 {min-width: 95.4px; min-height: 28.4px; border-style: solid; border-width: 1.0px 0.0px 1.0px 1.0px; border-color: #bfbfbf transparent #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td4 {min-width: 217.6px; min-height: 28.4px; border-style: solid; border-width: 0.0px 0.0px 1.0px 0.0px; border-color: transparent transparent #bfbfbf transparent; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td5 {min-width: 217.6px; min-height: 28.4px; border-style: solid; border-width: 1.0px 0.0px 1.0px 0.0px; border-color: #bfbfbf transparent #bfbfbf transparent; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td6 {min-width: 213.0px; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td7 {min-width: 213.1px; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td8 {min-width: 204.3px; min-height: 31.2px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td9 {min-width: 89.2px; min-height: 24.1px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td10 {min-width: 196.9px; min-height: 24.1px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td11 {min-width: 133.8px; min-height: 24.1px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td12 {min-width: 174.1px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td13 {min-width: 130.5px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td14 {min-width: 121.4px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td15 {min-width: 174.1px; min-height: 22.7px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td16 {min-width: 130.5px; min-height: 22.7px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td17 {min-width: 121.4px; min-height: 22.7px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td18 {min-width: 174.1px; min-height: 22.3px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td19 {min-width: 130.5px; min-height: 22.3px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td20 {min-width: 121.4px; min-height: 22.3px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td21 {min-width: 85.2px; min-height: 18.7px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td22 {min-width: 85.1px; min-height: 18.7px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td23 {min-width: 85.4px; min-height: 18.7px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td24 {min-width: 86.5px; min-height: 18.7px; border-style: solid; border-width: 1.5px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td25 {min-width: 77.0px; min-height: 18.7px; border-style: solid; border-width: 1.5px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td26 {min-width: 58.6px; min-height: 18.7px; border-style: solid; border-width: 1.5px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td27 {min-width: 58.7px; min-height: 18.7px; border-style: solid; border-width: 1.5px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td28 {min-width: 86.5px; min-height: 18.7px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td29 {min-width: 77.0px; min-height: 18.7px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td30 {min-width: 58.6px; min-height: 18.7px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td31 {min-width: 58.7px; min-height: 18.7px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td32 {min-width: 77.0px; min-height: 18.7px; border-style: solid; border-width: 1.0px 1.0px 1.5px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td33 {min-width: 58.6px; min-height: 18.7px; border-style: solid; border-width: 1.0px 1.0px 1.5px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td34 {min-width: 58.7px; min-height: 18.7px; border-style: solid; border-width: 1.0px 1.0px 1.5px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td35 {min-width: 106.5px; min-height: 1.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td36 {min-width: 106.6px; min-height: 1.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td37 {min-width: 106.5px; min-height: 1.0px; border-style: solid; border-width: 1.0px 1.0px 0.0px 1.0px; border-color: #bfbfbf #bfbfbf transparent #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td38 {min-width: 106.6px; min-height: 1.0px; border-style: solid; border-width: 1.0px 1.0px 0.0px 1.0px; border-color: #bfbfbf #bfbfbf transparent #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td39 {min-width: 106.5px; min-height: 1.0px; border-style: solid; border-width: 0.0px 1.0px 0.0px 1.0px; border-color: transparent #bfbfbf transparent #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td40 {min-width: 106.6px; min-height: 1.0px; border-style: solid; border-width: 0.0px 1.0px 0.0px 1.0px; border-color: transparent #bfbfbf transparent #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td41 {min-width: 106.5px; min-height: 1.0px; border-style: solid; border-width: 0.0px 1.0px 1.5px 1.0px; border-color: transparent #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td42 {min-width: 106.6px; min-height: 1.0px; border-style: solid; border-width: 0.0px 1.0px 1.5px 1.0px; border-color: transparent #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td43 {min-width: 353.2px; border-style: solid; border-width: 0.0px 1.0px 0.0px 1.0px; border-color: transparent #bfbfbf transparent #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td44 {min-width: 72.1px; border-style: solid; border-width: 0.0px 1.0px 0.0px 1.0px; border-color: transparent #bfbfbf transparent #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td45 {min-width: 226.1px; min-height: 4.5px; border-style: solid; border-width: 1.5px 1.0px 1.0px 1.5px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td46 {min-width: 200.0px; min-height: 4.5px; border-style: solid; border-width: 1.5px 1.5px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td47 {min-width: 226.1px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.5px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td48 {min-width: 200.0px; border-style: solid; border-width: 1.0px 1.5px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td49 {min-width: 226.1px; border-style: solid; border-width: 1.0px 1.0px 1.5px 1.5px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td50 {min-width: 200.0px; border-style: solid; border-width: 1.0px 1.5px 1.5px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td51 {min-width: 219.9px; border-style: solid; border-width: 1.5px 1.0px 1.0px 1.5px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td52 {min-width: 206.2px; border-style: solid; border-width: 1.5px 1.5px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td53 {min-width: 219.9px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.5px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td54 {min-width: 206.2px; border-style: solid; border-width: 1.0px 1.5px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td55 {min-width: 219.9px; border-style: solid; border-width: 1.0px 1.0px 1.5px 1.5px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    td.td56 {min-width: 206.2px; border-style: solid; border-width: 1.0px 1.5px 1.5px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+  </style>
+</head>
+<body>
+<p class="p1"><b>中图分类号：</b><span class="s1"><b> TP39<span class="Apple-converted-space"> </span></b></span><b><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">                                </span>学校代码：</b><span class="s1"><b> 10347<span class="Apple-converted-space"> </span></b> <span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><b>UDC 分类号：</b><span class="s1"><b> <span class="Apple-converted-space">     </span></b></span><b><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">                                </span>密<span class="Apple-converted-space">    </span>级：</b><span class="s1"><b><span class="Apple-converted-space">  </span>公开 <span class="Apple-converted-space">     </span></b><b></b></span></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p3"><b>硕 士 学 位 论 文</b></p>
+<p class="p4"><br></p>
+<p class="p5"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="bottom" class="td1">
+        <p class="p6"><b>嵌入工程教育的计算能力及其培养模式研究</b></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td2">
+        <p class="p7"><b>Computing Competence and Its Training Model Embedded in Engineering Education<span class="Apple-converted-space"> </span></b><b></b></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="bottom" class="td3">
+        <p class="p9"><b>论文作者：</b></p>
+      </td>
+      <td valign="bottom" class="td4">
+        <p class="p10"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td3">
+        <p class="p9"><b>学<span class="Apple-converted-space">    </span>号：</b></p>
+      </td>
+      <td valign="bottom" class="td5">
+        <p class="p10"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td3">
+        <p class="p9"><b>指导教师：</b></p>
+      </td>
+      <td valign="bottom" class="td5">
+        <p class="p7">*** 教授/副教授/讲师</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td3">
+        <p class="p9"><b>学位类型：</b></p>
+      </td>
+      <td valign="bottom" class="td5">
+        <p class="p10"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td3">
+        <p class="p9"><b>学科专业：</b></p>
+      </td>
+      <td valign="bottom" class="td5">
+        <p class="p10"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td3">
+        <p class="p9"><b>研究方向：</b></p>
+      </td>
+      <td valign="bottom" class="td5">
+        <p class="p10"><br></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td3">
+        <p class="p9"><b>培养单位：</b></p>
+      </td>
+      <td valign="bottom" class="td5">
+        <p class="p7">信息工程学院</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom" class="td3">
+        <p class="p9"><b>提交日期：</b></p>
+      </td>
+      <td valign="bottom" class="td5">
+        <p class="p7">20<span class="Apple-converted-space">  </span>年 <span class="Apple-converted-space">  </span>月<span class="Apple-converted-space">    </span>日</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p11">湖州师范大学学位论文原创性声明 </p>
+<p class="p12"><br></p>
+<p class="p13">本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，也不包含为获得<span class="s1"> <b>湖州师范大学</b> </span>或其他教育机构的学位或证书而使用过的材料。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示谢意。</p>
+<p class="p14"><br></p>
+<p class="p14"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td6">
+        <p class="p15"><b>论文作者签名：</b><b></b></p>
+      </td>
+      <td valign="middle" class="td7">
+        <p class="p16"><b>签字日期：<span class="Apple-converted-space">      </span></b>年 <span class="Apple-converted-space">  </span>月 <span class="Apple-converted-space">  </span>日</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p17"><br></p>
+<p class="p18"><span class="Apple-converted-space">      </span></p>
+<p class="p19">湖州师范大学学位论文版权使用授权书</p>
+<p class="p20"> </p>
+<p class="p20">本学位论文作者完全了解<span class="Apple-converted-space"> </span><span class="s1"> <b>湖州师范大学</b><span class="Apple-converted-space"> </span></span> 有权保留并向国家有关部门或机构送交本论文的复印件和磁盘，允许论文被查阅和借阅。本人授权<span class="s1"> <b>湖州师范大学</b> </span>可以将学位论文的全部或部分内容编入有关数据库进行检索和传播，可以采用影印、缩印或扫描等复制手段保存、汇编学位论文。</p>
+<p class="p20">本学位论文属于（请在以下相应方框内打“√”）</p>
+<p class="p21">□ 保密，在_____年解密后适用本授权书。</p>
+<p class="p21">□ 不保密。</p>
+<p class="p22"><br></p>
+<p class="p22"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td8">
+        <p class="p16"><b>论文作者签名：</b></p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p16"><b>指导教师签名：</b></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td8">
+        <p class="p15"><b>签字日期：<span class="Apple-converted-space">      </span></b>年 <span class="Apple-converted-space">  </span>月 <span class="Apple-converted-space">  </span>日</p>
+      </td>
+      <td valign="middle" class="td8">
+        <p class="p15"><b>签字日期：<span class="Apple-converted-space">      </span></b>年 <span class="Apple-converted-space">  </span>月 <span class="Apple-converted-space">  </span>日</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p23"><span class="s2"></span><b>摘 要</b></p>
+<p class="p20"><span class="s3">摘要的撰写应符合《文献摘要编写规则》（</span><span class="s4">GB/T 6447</span><span class="s3">）的规定。中文摘要字数一般为</span><span class="s4">300字～1000字</span><span class="s3">。摘要中尽量避免采用图、表、化学结构式、非公知公用的符号和术语。</span>以下为撰写模板，各学位点可根据需要进行修改。</p>
+<p class="p20">第一段主要阐述选题的意义。</p>
+<p class="p20">第二段简单介绍研究动机、方法、目的。从存在的问题出发，阐述你采用什么方法，依据什么理论或做了什么实验，解决了前面指出的问题及取得的成果。本文的主要工作和成果如下：</p>
+<p class="p20">1.针对……，采用……，提出了……，效果如何；</p>
+<p class="p20">2.摘要应表达学位论文的中心内容，简短明了，摘取论文中的基本信息，体现科研工作的核心思想，根据内容自行分段描述。 <span class="Apple-converted-space">   </span></p>
+<p class="p20">最后一段，对全文进行总结，并对进一步的研究提出展望。</p>
+<p class="p24"><b>关键词：</b>材质检索；材质优化；三维重建；深度学习</p>
+<p class="p25"><br></p>
+<p class="p26"><br></p>
+<p class="p26"><br></p>
+<p class="p26"><br></p>
+<p class="p26"><br></p>
+<p class="p26"><br></p>
+<p class="p18"><br></p>
+<p class="p23"><span class="s5"></span><b>Abstract</b></p>
+<p class="p27">The abstract in English and Chinese version should basically correspond to each other. Since the abstract is the major summary for the content of the paper, it should explain the purpose, methods, results and conclusions of your research with brief and accurate words. The new findings and views of the research must be highlighted. The keywords of the abstract should be 3 up to 5. They should be common words known and used by public or technical terms. Words created on your own or abbreviations and symbols cannot be used as keywords. Phrases should not be too long.<span class="Apple-converted-space"> </span></p>
+<p class="p27">The English abstract version should be written in the third person singular tone to introduce the content of the paper in a bid to make it easier for other articles to quote or make reference to it. Therefore, it is not suitable to use the first person's statement in the writing of the English abstract. The basic tense of the narrative is the general present tense. When there is a need to emphasize the past things or the actions have been done already then you can use the past tense, the perfect tense and other tenses.</p>
+<p class="p28"><b>Key Words: </b>Material Retrieval; Material Optimization; 3D Reconstruction; Deep Learning</p>
+<p class="p29"><br></p>
+<p class="p18"><span class="s6"><b></b></span><br></p>
+<p class="p19"><span class="s7"><b></b></span><b>目 录</b></p>
+<p class="p30"><b>TOC \o "1-3" \h \u<span class="Apple-converted-space">  </span>HYPERLINK \l _Toc118 摘 要<span class="Apple-tab-span">	</span> PAGEREF _Toc118 \h I</b></p>
+<p class="p30"><b><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc23497 Abstract<span class="Apple-tab-span">	</span> PAGEREF _Toc23497 \h II</b></p>
+<p class="p30"><b><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc14721 插图清单<span class="Apple-tab-span">	</span> PAGEREF _Toc14721 \h V</b></p>
+<p class="p30"><b><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc7220 附表清单<span class="Apple-tab-span">	</span> PAGEREF _Toc7220 \h VI</b></p>
+<p class="p30"><b><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc20107 缩略词表<span class="Apple-tab-span">	</span> PAGEREF _Toc20107 \h VII</b></p>
+<p class="p30"><b><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc16635 1<span class="Apple-converted-space">  </span>绪论<span class="Apple-tab-span">	</span> PAGEREF _Toc16635 \h 1</b></p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc11217 1.1<span class="Apple-converted-space">  </span>研究背景及意义<span class="Apple-tab-span">	</span> PAGEREF _Toc11217 \h 1</p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc30930 1.2<span class="Apple-converted-space">  </span>国内外研究现状分析<span class="Apple-tab-span">	</span> PAGEREF _Toc30930 \h 1</p>
+<p class="p32"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc11637 1.2.1<span class="Apple-converted-space">  </span>三级标题<span class="Apple-tab-span">	</span> PAGEREF _Toc11637 \h 1</p>
+<p class="p32"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc12298 1.2.2<span class="Apple-converted-space">  </span>三级标题<span class="Apple-tab-span">	</span> PAGEREF _Toc12298 \h 1</p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc11393 1.3<span class="Apple-converted-space">  </span>研究内容<span class="Apple-tab-span">	</span> PAGEREF _Toc11393 \h 1</p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc14695 1.4<span class="Apple-converted-space">  </span>组织结构<span class="Apple-tab-span">	</span> PAGEREF _Toc14695 \h 1</p>
+<p class="p30"><b><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc7941 2<span class="Apple-converted-space">  </span>主体<span class="Apple-tab-span">	</span> PAGEREF _Toc7941 \h 2</b></p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc20399 2.1<span class="Apple-converted-space">  </span>正文相关要求<span class="Apple-tab-span">	</span> PAGEREF _Toc20399 \h 2</p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc17878 2.2<span class="Apple-converted-space">  </span>页面设置与打印要求<span class="Apple-tab-span">	</span> PAGEREF _Toc17878 \h 2</p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc1246 2.3<span class="Apple-converted-space">  </span>本章小结<span class="Apple-tab-span">	</span> PAGEREF _Toc1246 \h 2</p>
+<p class="p30"><b><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc30076 3<span class="Apple-converted-space">  </span>文献标注<span class="Apple-tab-span">	</span> PAGEREF _Toc30076 \h 3</b></p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc9207 3.1<span class="Apple-converted-space">  </span>引用单篇文献的顺序编码规则<span class="Apple-tab-span">	</span> PAGEREF _Toc9207 \h 3</p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc15157 3.2<span class="Apple-converted-space">  </span>引用多篇文献的顺序编码规则<span class="Apple-tab-span">	</span> PAGEREF _Toc15157 \h 3</p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc25178 3.3<span class="Apple-converted-space">  </span>标注作者姓氏和出版年的写作规则<span class="Apple-tab-span">	</span> PAGEREF _Toc25178 \h 3</p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc26494 3.4<span class="Apple-converted-space">  </span>标注出版年的写作规则<span class="Apple-tab-span">	</span> PAGEREF _Toc26494 \h 3</p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc25798 3.5<span class="Apple-converted-space">  </span>本章小结<span class="Apple-tab-span">	</span> PAGEREF _Toc25798 \h 3</p>
+<p class="p30"><b><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc4487 4<span class="Apple-converted-space">  </span>图表、公式格式<span class="Apple-tab-span">	</span> PAGEREF _Toc4487 \h 4</b></p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc32110 4.1<span class="Apple-converted-space">  </span>图的格式<span class="Apple-tab-span">	</span> PAGEREF _Toc32110 \h 4</p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc873 4.2<span class="Apple-converted-space">  </span>表的格式<span class="Apple-tab-span">	</span> PAGEREF _Toc873 \h 5</p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc29651 4.3<span class="Apple-converted-space">  </span>公式的格式<span class="Apple-tab-span">	</span> PAGEREF _Toc29651 \h 7</p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc15664 4.4<span class="Apple-converted-space">  </span>本章小结<span class="Apple-tab-span">	</span> PAGEREF _Toc15664 \h 7</p>
+<p class="p30"><b><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc27706 5<span class="Apple-converted-space">  </span>总结与展望<span class="Apple-tab-span">	</span> PAGEREF _Toc27706 \h 8</b></p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc27879 5.1<span class="Apple-converted-space">  </span>工作总结<span class="Apple-tab-span">	</span> PAGEREF _Toc27879 \h 8</p>
+<p class="p31"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc29684 5.2<span class="Apple-converted-space">  </span>工作展望<span class="Apple-tab-span">	</span> PAGEREF _Toc29684 \h 8</p>
+<p class="p30"><b><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc27717 参考文献<span class="Apple-tab-span">	</span> PAGEREF _Toc27717 \h 9</b></p>
+<p class="p30"><b><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc8407 附 录<span class="Apple-tab-span">	</span> PAGEREF _Toc8407 \h 14</b></p>
+<p class="p30"><b><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc6335 作者简历及在学期间取得的创新性成果<span class="Apple-tab-span">	</span> PAGEREF _Toc6335 \h 15</b></p>
+<p class="p30"><b><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc26012 致 谢<span class="Apple-tab-span">	</span> PAGEREF _Toc26012 \h 17</b></p>
+<p class="p23"><span class="s5"><b></b></span><b>插图清单</b></p>
+<p class="p30">TOC \t "图目录" \h \c HYPERLINK \l _Toc31071 图4.1<span class="Apple-converted-space">  </span>之前空2格，宋体五号字体<span class="Apple-tab-span">	</span> PAGEREF _Toc31071 \h 4</p>
+<p class="p30"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc16042 图4.2<span class="Apple-converted-space">  </span>氧化时间对废盐有机物脱除效率及单位能耗的影响<span class="Apple-tab-span">	</span> PAGEREF _Toc16042 \h 5</p>
+<p class="p33"><br></p>
+<p class="p33"><br></p>
+<p class="p33"><br></p>
+<p class="p33"><br></p>
+<p class="p33"><br></p>
+<p class="p33"><br></p>
+<p class="p33"><br></p>
+<p class="p33"><br></p>
+<p class="p33"><br></p>
+<p class="p34"><b></b><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p23"><span class="s5"></span><b>附表清单TOC \t "表目录" \h \c</b></p>
+<p class="p30"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc29627 表4.1<span class="Apple-converted-space">  </span>之前空2格，居中（三线表）<span class="Apple-tab-span">	</span> PAGEREF _Toc29627 \h 5</p>
+<p class="p30"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc30851 表4.2<span class="Apple-converted-space">  </span>废盐成分分析表<span class="Apple-tab-span">	</span> PAGEREF _Toc30851 \h 6</p>
+<p class="p30"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc32013 表4.3<span class="Apple-converted-space">  </span>不同激励函数组合形式下模型测试集MAE/MAPE/<i>R</i><sup>2</sup><span class="Apple-tab-span">	</span> PAGEREF _Toc32013 \h 6</p>
+<p class="p30"><span class="Apple-converted-space"> </span>HYPERLINK \l _Toc22076 表4.4<span class="Apple-converted-space">  </span>WOA-BP 神经网络的参数设置<span class="Apple-tab-span">	</span> PAGEREF _Toc22076 \h 6</p>
+<p class="p35"><b></b><br></p>
+<p class="p34"><b></b><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p23"><span class="s5"></span><b>缩略词表</b></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td9">
+        <p class="p36"><b>缩略词</b></p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p36"><b>英文全称</b></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p36"><b>中文全称</b></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td9">
+        <p class="p37">SEM<span class="s8"></span>Scanning Electron Microscope<span class="s8"></span>扫描电镜</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td9">
+        <p class="p37">TEM<span class="s8"></span>Transmission Electron Microscope<span class="s8"></span>透射电镜</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td9">
+        <p class="p37">GFAP<span class="s8"></span>Glial Fibrillary Acidic Protein<span class="s8"></span>胶质纤维酸性蛋白</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td9">
+        <p class="p37">TPK</p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p37">Tyrosine Protein Kinase</p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p37">酪氨酸蛋白激酶</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p38">APAmmonium Persulfoxide过硫酸铵P185185 protein185蛋白</p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p23"><span class="s5"></span><b>1<span class="Apple-converted-space">  </span>绪论</b></p>
+<p class="p27">根据需要，作者也可将此部分命名为“引言”。该部分包含的内容：说明论文的主题和选题的范围（研究背景及意义）；对本论文研究主要范围内已有文献的评述，建议与相关历史回顾、前人工作的文献评论、理论分析等相结合（国内外研究现状分析）；说明本论文的研究内容以及章节结构安排。</p>
+<p class="p39"><b>1.1<span class="Apple-converted-space">  </span>研究背景及意义</b></p>
+<p class="p8"><br></p>
+<p class="p39"><b>1.2<span class="Apple-converted-space">  </span>国内外研究现状分析</b></p>
+<p class="p29"><br></p>
+<p class="p30"><b>1.2.1<span class="Apple-converted-space">  </span>三级标题<span class="Apple-converted-space"> </span></b></p>
+<p class="p29"><br></p>
+<p class="p30"><b>1.2.2<span class="Apple-converted-space">  </span>三级标题<span class="Apple-converted-space"> </span></b></p>
+<p class="p8"><br></p>
+<p class="p39"><b>1.3<span class="Apple-converted-space">  </span>研究内容</b></p>
+<p class="p27">研究内容、技术路线、创新点等，供参考。</p>
+<p class="p39"><b>1.4<span class="Apple-converted-space">  </span>组织结构</b></p>
+<p class="p27">从第二章起，各章内容简介。</p>
+<p class="p29"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p18"><br></p>
+<p class="p23"><b>2<span class="Apple-converted-space">  </span>主体</b></p>
+<p class="p39"><b>2.1<span class="Apple-converted-space">  </span>正文相关要求</b></p>
+<p class="p27">正文字数一般不少于2.5万字。正文部分通常包括引言(绪论)、主体和结论。引言(绪论)应包括所研究领域的历史回顾和前人工作的综合述评，以及论文的研究目的、流程和方法等。主体应实事求是、客观真切、准备完备、合乎逻辑、层次分明、简练可读；应严格遵循学术规范，充分尊重和借鉴已有的学术成果，注重调查研究，在全面掌握相关研究资料和学术信息的基础上，精心设计研究方案，讲究科学方法；应论证缜密、表达准确。结论是最终的总体的结论，不是正文中各段的小结的简单重复；应包括论文的核心观点，交代研究工作的局限，提出未来工作的意见或建议；应准确、完整，明确、精练。</p>
+<p class="p39"><b>2.2<span class="Apple-converted-space">  </span>页面设置与打印要求</b></p>
+<p class="p27">论文页边距设置：上、下2.54cm，左、右3.17cm。页眉上边距设置：1.5cm,页脚下边距设置：1.75cm。</p>
+<p class="p27">印刷型学位论文宜用A4 标准纸印制，封面用A3青色皮纹纸。电子版学位论文应采用规定格式，并可提供音频、视频、数据集等数字资料。“封面”和“原创性声明、版权使用授权书”单面印刷，不加页眉和页码。从“摘要”开始，各部分双面印刷，并编写页码。</p>
+<p class="p39"><b>2.3<span class="Apple-converted-space">  </span>本章小结<span class="Apple-converted-space"> </span></b></p>
+<p class="p27">本章小结是对该章研究的浓缩提炼，可以包含完成的关键工作与方法，提炼的研究结果和规律。简要指出本章的创新点或价值，并说明如何承上启下。</p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p8"><br></p>
+<p class="p23"><span class="s5"></span><span class="s8"><b>3<span class="Apple-converted-space">  </span></b></span><b>文献标注</b></p>
+<p class="p40">论文正文中引用的文献的标注方法应遵照GB/T 7714的规定，可采用顺序编码制，也可采用著者出版年制，但全文应统一。</p>
+<p class="p41"><b>3.1<span class="Apple-converted-space">  </span>引用单篇文献的顺序编码规则</b></p>
+<p class="p40">例：德国学者N. 克罗斯研究了瑞士巴塞尔市附近休罗山中老第三纪断裂对第三系褶皱的控制<sup>[15]</sup>；之后，他又描述了西里西亚第3条大型的近南北向构造带，并提出地槽是在不均一的块体的基底上发展的思想<sup>[16]</sup>。</p>
+<p class="p41"><b>3.2<span class="Apple-converted-space">  </span>引用多篇文献的顺序编码规则</b></p>
+<p class="p40">例：裴伟<sup>[57, 83]</sup>提出……莫拉德对稳定区的节理格式的研究<sup>[95-97]</sup>……</p>
+<p class="p41"><b>3.3<span class="Apple-converted-space">  </span>标注作者姓氏和出版年的写作规则</b></p>
+<p class="p40">例：结构分析的子结构法最早是为解决飞机结构这类大型和复杂结构的有限元分析问题而发展起来的（Przemienicki，1968），而后，被用于共同作用分析（Haddadin，1971），并且已经取得快速发展。</p>
+<p class="p41"><b>3.4<span class="Apple-converted-space">  </span>标注出版年的写作规则</b></p>
+<p class="p40">例：Brodaway等（1986）报道在人工饲料中添加蛋白酶抑制剂会抑制昆虫的生长和发育。Johnson等（1993）报道蛋白酶抑制剂基因在烟草中表达，可有效减少昆虫的危害。</p>
+<p class="p41"><b>3.5<span class="Apple-converted-space">  </span>本章小结</b></p>
+<p class="p42"><br></p>
+<p class="p43"><br></p>
+<p class="p43"><br></p>
+<p class="p43"><br></p>
+<p class="p43"><br></p>
+<p class="p43"><br></p>
+<p class="p43"><br></p>
+<p class="p43"><br></p>
+<p class="p23"><span class="s5"></span><b>4<span class="Apple-converted-space">  </span>图表、公式格式</b></p>
+<p class="p44">图、表、公式等经常在论文中被使用，但使用时需要注意其规范，包括格式、排版、引用要求等。</p>
+<p class="p39"><b>4.1<span class="Apple-converted-space">  </span>图的格式</b></p>
+<p class="p27">图包括曲线图、构造图、示意图、框图、流程图、记录图、地图、照片等。图应具有“自明性”，且随文出现。图的编排应符合《学术出版规范插图》（CY/T 171）的规定。</p>
+<p class="p27">图的前后各空一行，图题（反映图中内容的文字描述）用宋体五号字体。引用图应在图题右上角标出文献的来源。</p>
+<p class="p27">图号按章顺序编排，如图4.1为第四章第一幅图。如果图中含有几个不同部分，应标注分图号，并给出分图的图题，如图4.2所示。</p>
+<p class="p27">绘图必须工整、清晰、规范。其中机械零件图按机械制图规格要求；示意图应能清楚地反映图示内容。照片应在右下角给出放大标尺。</p>
+<p class="p45">例：图4.1</p>
+<p class="p46"><br></p>
+<p class="p47"><br></p>
+<p class="p48">图4. SEQ 图3. \* ARABIC 1<span class="Apple-converted-space">  </span>之前空2格，宋体五号字体</p>
+<p class="p49"><br></p>
+<p class="p45">例：图4.2</p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p50"><br></p>
+<p class="p50"><br></p>
+<p class="p50"><br></p>
+<p class="p50"><br></p>
+<p class="p50"><br></p>
+<p class="p50"><br></p>
+<p class="p51"><br></p>
+<p class="p52">(a) 氧化时间对废盐有机物脱除率的影响<span class="Apple-converted-space">    </span>(b) 氧化时间对废盐有机物脱除率的影响<span class="Apple-converted-space"> </span></p>
+<p class="p48">图4.2<span class="Apple-converted-space">  </span>氧化时间对废盐有机物脱除效率及单位能耗的影响<span class="Apple-converted-space"> </span></p>
+<p class="p50"><br></p>
+<p class="p39"><b>4.2<span class="Apple-converted-space">  </span>表的格式</b><b></b></p>
+<p class="p27">表应具有“自明性”，且随文出现。其编排应符合《学术出版规范表格》（CY/T 170）的规定。</p>
+<p class="p27">每张表格的前后空一行，表格按章顺序编号，如表4.2为第四章第二张表。每张表应有表题，表题用宋体五号字体，放在表的上方。表中的内容用宋体五号字体，英文及数字用Times New Roman五号字体。表格太大需要转页时，需要在续表上方注明，如表4.4（续），表头也应重复排出。</p>
+<p class="p45">例：表4.1</p>
+<p class="p53"><br></p>
+<p class="p54">表4. SEQ 表3. \* ARABIC 1<span class="Apple-converted-space">  </span>之前空2格，居中（三线表）</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td12">
+        <p class="p55"><b>单倍行距，段前段后选3磅</b><b></b></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p55"><b><span class="Apple-converted-space"> </span>总的原则是美观</b><b></b></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p55"><b>模转换成 EMBED Equation.3<span class="Apple-converted-space">  </span>模</b><b></b></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p55">在“表格－表格属性”中选居中</p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p55"><span class="Apple-converted-space"> </span>EMBED Equation.3 <span class="Apple-converted-space"> </span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p55"><span class="Apple-converted-space"> </span>EMBED Equation.3 <span class="Apple-converted-space"> </span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td18">
+        <p class="p55">不同</p>
+      </td>
+      <td valign="middle" class="td19">
+        <p class="p55"><span class="Apple-converted-space"> </span>EMBED Equation.3 <span class="Apple-converted-space"> </span></p>
+      </td>
+      <td valign="middle" class="td20">
+        <p class="p55"><span class="Apple-converted-space"> </span>EMBED Equation.3 <span class="Apple-converted-space"> </span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p56">注：如有表注，首行缩进2个字符，宋体五号，英文及数字用Times New Roman五号字体，两端对齐。</p>
+<p class="p57"><br></p>
+<p class="p45">例：表4.2和4.3</p>
+<p class="p33"><br></p>
+<p class="p54">表4.2<span class="Apple-converted-space">  </span>废盐成分分析表</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td21">
+        <p class="p55"><b>总氮 （%）</b></p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p55"><b>热值 (kJ/kg)</b></p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p55"><b>有机氟 （%）</b></p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p55"><b>氯离子 （%）</b></p>
+      </td>
+      <td valign="middle" class="td23">
+        <p class="p55"><b>钠离子 （%）</b></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td21">
+        <p class="p55">0.19</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p55">119</p>
+      </td>
+      <td valign="middle" class="td21">
+        <p class="p55">0.01</p>
+      </td>
+      <td valign="middle" class="td22">
+        <p class="p55">58.19</p>
+      </td>
+      <td valign="middle" class="td23">
+        <p class="p55">40.14</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p58"><br></p>
+<p class="p54">表4.3<span class="Apple-converted-space">  </span>不同激励函数组合形式下模型测试集MAE/MAPE/<i>R</i><sup>2</sup><sup></sup></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td24">
+        <p class="p55"><b>输入层到隐藏层</b></p>
+      </td>
+      <td valign="middle" class="td24">
+        <p class="p55"><b>隐含层到输出层</b></p>
+      </td>
+      <td valign="middle" class="td25">
+        <p class="p55"><b>目标</b></p>
+      </td>
+      <td valign="middle" class="td26">
+        <p class="p55"><b>MAE</b></p>
+      </td>
+      <td valign="middle" class="td27">
+        <p class="p55"><b>MAPE</b></p>
+      </td>
+      <td valign="middle" class="td27">
+        <p class="p55"><b><i>R</i></b><b><sup>2</sup></b><b><sup></sup></b></p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="middle" class="td28">
+        <p class="p55">logsig</p>
+      </td>
+      <td rowspan="2" valign="middle" class="td28">
+        <p class="p55">purelin</p>
+      </td>
+      <td valign="middle" class="td29">
+        <p class="p55">有机物脱除率</p>
+      </td>
+      <td valign="middle" class="td30">
+        <p class="p55">0.0360</p>
+      </td>
+      <td valign="middle" class="td31">
+        <p class="p55">5.2766</p>
+      </td>
+      <td valign="middle" class="td31">
+        <p class="p55">0.8789</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td29">
+        <p class="p55">克料能耗</p>
+      </td>
+      <td valign="middle" class="td30">
+        <p class="p55">0.0838</p>
+      </td>
+      <td valign="middle" class="td31">
+        <p class="p55">4.0341</p>
+      </td>
+      <td valign="middle" class="td31">
+        <p class="p55">0.8795</p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="middle" class="td28">
+        <p class="p55">tansig</p>
+      </td>
+      <td rowspan="2" valign="middle" class="td28">
+        <p class="p55">purelin</p>
+      </td>
+      <td valign="middle" class="td29">
+        <p class="p55">有机物脱除率</p>
+      </td>
+      <td valign="middle" class="td30">
+        <p class="p55">0.0346</p>
+      </td>
+      <td valign="middle" class="td31">
+        <p class="p55">5.6953</p>
+      </td>
+      <td valign="middle" class="td31">
+        <p class="p55">0.8730</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td32">
+        <p class="p55">克料能耗</p>
+      </td>
+      <td valign="middle" class="td33">
+        <p class="p55">0.0811<span class="Apple-converted-space"> </span></p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p55">3.9668<span class="Apple-converted-space"> </span></p>
+      </td>
+      <td valign="middle" class="td34">
+        <p class="p55">0.8916</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p59"><br></p>
+<p class="p27">从表4.2和表4.3可以看出，……。</p>
+<p class="p45">例：表4.4</p>
+<p class="p60"><br></p>
+<p class="p54">表4.4<span class="Apple-converted-space">  </span>WOA-BP 神经网络的参数设置</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td35">
+        <p class="p61"><b>参数名称</b></p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p61"><b>数值</b></p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p61"><b>参数名称</b></p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p61"><b>数值</b></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td37">
+        <p class="p61">最大迭代次数</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p61">1000</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p61">种群目标</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p61">32</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p61">学习率</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">0.001</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">最大迭代次数</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p61">131</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p61">隐藏层神经元个数</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">10</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">鱼群跟随程度</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p61">0.7</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p61">目标误差</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">0.000001</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">变异概率</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p61">0.05</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p61">最大迭代次数</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">1000</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">种群目标</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p61">32</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p61">学习率</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">0.001</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">最大迭代次数</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p61">131</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p61">隐藏层神经元个数</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">10</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">鱼群跟随程度</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p61">0.7</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p61">目标误差</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">0.000001</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">变异概率</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p61">0.05</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p61">最大迭代次数</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">1000</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">种群目标</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p61">32</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p61">学习率</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">0.001</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">最大迭代次数</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p61">131</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p61">隐藏层神经元个数</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">10</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">鱼群跟随程度</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p61">0.7</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p61">目标误差</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">0.000001</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">变异概率</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p61">0.05</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p61">最大迭代次数</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">1000</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">种群目标</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p61">32</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p61">学习率</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">0.001</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p61">最大迭代次数</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p61">131</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td41">
+        <p class="p61">隐藏层神经元个数</p>
+      </td>
+      <td valign="middle" class="td41">
+        <p class="p61">10</p>
+      </td>
+      <td valign="middle" class="td41">
+        <p class="p61">鱼群跟随程度</p>
+      </td>
+      <td valign="middle" class="td42">
+        <p class="p61">0.7</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p62"><br></p>
+<p class="p61">表4.4 （续）</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td35">
+        <p class="p55"><b>参数名称</b></p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p55"><b>数值</b></p>
+      </td>
+      <td valign="middle" class="td35">
+        <p class="p55"><b>参数名称</b></p>
+      </td>
+      <td valign="middle" class="td36">
+        <p class="p55"><b>数值</b></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td37">
+        <p class="p55">隐藏层神经元个数</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p55">10</p>
+      </td>
+      <td valign="middle" class="td37">
+        <p class="p55">鱼群跟随程度</p>
+      </td>
+      <td valign="middle" class="td38">
+        <p class="p55">0.7</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p55">目标误差</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p55">0.000001</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p55">变异概率</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p55">0.05</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td39">
+        <p class="p55">最大迭代次数</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p55">1000</p>
+      </td>
+      <td valign="middle" class="td39">
+        <p class="p55">种群目标</p>
+      </td>
+      <td valign="middle" class="td40">
+        <p class="p55">32</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td41">
+        <p class="p55">学习率</p>
+      </td>
+      <td valign="middle" class="td41">
+        <p class="p55">0.001</p>
+      </td>
+      <td valign="middle" class="td41">
+        <p class="p55">最大迭代次数</p>
+      </td>
+      <td valign="middle" class="td42">
+        <p class="p55">131</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p63"><br></p>
+<p class="p39"><b>4.3<span class="Apple-converted-space">  </span>公式的格式</b></p>
+<p class="p27">公式应在文中另起一行。公式用公式编辑器居中编排，后应注明序号（序号含括号，都为Times New Roman字体），按章顺序编排，且编号右对齐。对公式特别多的论文，也可以按节编排，但全文要统一。</p>
+<p class="p64">例1：</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td43">
+        <p class="p65"><span class="Apple-converted-space"> </span>EMBED Equation.KSEE3<span class="Apple-converted-space">  </span>\* MERGEFORMAT<span class="Apple-converted-space"> </span></p>
+      </td>
+      <td valign="middle" class="td44">
+        <p class="p66">(4.1)</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td43">
+        <p class="p65"><span class="Apple-converted-space"> </span>EMBED Equation.KSEE3<span class="Apple-converted-space">  </span>\* MERGEFORMAT<span class="Apple-converted-space"> </span></p>
+      </td>
+      <td valign="middle" class="td44">
+        <p class="p66">(4.2)<span class="Apple-converted-space"> </span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p30">其中，T是转置符号，d是微分符号，常数e是自然对数的底，在公式中均需采用正体。</p>
+<p class="p45">例2：</p>
+<p class="p27">由于一般的文献资料中所给出的载荷和抗力的统计参数主要为变异系数，为便于讨论，定义公式形式如下：</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td43">
+        <p class="p65"><span class="s9"><span class="Apple-converted-space"> </span>EMBED Equation.3<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td44">
+        <p class="p66">(4.3)</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p30">其中，<i>μ</i><i><sub>R</sub></i>，<i>μ</i><i><sub>S</sub></i>分别为抗力和载荷效应的均值……。</p>
+<p class="p39"><b>4.4<span class="Apple-converted-space">  </span>本章小结</b></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p23"><b>5<span class="Apple-converted-space">  </span>总结与展望</b></p>
+<p class="p39"><b>5.1<span class="Apple-converted-space">  </span>工作总结</b></p>
+<p class="p39"><b>5.2<span class="Apple-converted-space">  </span>工作展望</b></p>
+<p class="p8"><br></p>
+<p class="p67"><br></p>
+<p class="p67"><br></p>
+<p class="p67"><br></p>
+<p class="p67"><br></p>
+<p class="p67"><br></p>
+<p class="p67"><br></p>
+<p class="p67"><br></p>
+<p class="p67"><br></p>
+<p class="p67"><br></p>
+<p class="p67"><br></p>
+<p class="p68"><b></b><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p18"><br></p>
+<p class="p23"><b>参考文献</b></p>
+<p class="p40"><span class="s8">参考文献应按文中引用出现的顺序列全，附于文末，若参考文献数目过多也可以附在每章之后。正文中列出的参考文献必须实事求是，</span>未被引用但被阅读或具有补充信息的文献可集中列入附录中，其标题为“参考书目”。文科类学院或学位点在此要求基础上，基于GB/T 7714规定，可提出脚注、尾注、参考文献的具体要求。</p>
+<p class="p27">根据GB/T 7714规定，各种参考文献类型和标识代码如下：</p>
+<p class="p18"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td45">
+        <p class="p69"><b>文献类型</b></p>
+      </td>
+      <td valign="middle" class="td46">
+        <p class="p69"><b>标识代码</b></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69">图书</p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">M</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69">期刊</p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">J</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69">报纸</p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">N</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69">会议录、论文集</p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">C</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69">学位论文</p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">D</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69">报告</p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">R</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69">标准</p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">S</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69">专利</p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">P</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69">网站、网页</p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69"><span class="s10">EB</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69"><span class="s11">档案</span></p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">A</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69"><span class="s12">地图</span></p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">CM</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69"><span class="s13">数据集</span></p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69"><span class="s13">DS</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69">预印本</p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">PP</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69">汇编</p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">G</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69">计算机程序</p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">CP</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td47">
+        <p class="p69">数据库</p>
+      </td>
+      <td valign="middle" class="td48">
+        <p class="p69">DB</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td49">
+        <p class="p69">其他</p>
+      </td>
+      <td valign="middle" class="td50">
+        <p class="p69">Z</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p70"><br></p>
+<p class="p71">对于上述图书、期刊、报纸、会议录等的电子资源载体和标识代码如下：</p>
+<p class="p70"><br></p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td51">
+        <p class="p72"><b>电子资源载体类型</b></p>
+      </td>
+      <td valign="middle" class="td52">
+        <p class="p72"><b>载体类型标识代码</b></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td53">
+        <p class="p73"><span class="s14">磁带（</span>magnetic<span class="s15"> </span>tape<span class="s14">）</span></p>
+      </td>
+      <td valign="middle" class="td54">
+        <p class="p74"><span class="s16">MT</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td53">
+        <p class="p75"><span class="s11">磁盘（</span>disk<span class="s11">）</span></p>
+      </td>
+      <td valign="middle" class="td54">
+        <p class="p74"><span class="s16">DK</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td53">
+        <p class="p76"><span class="s17">光盘（</span>CD<span class="s17">-</span>ROM<span class="s17">）</span></p>
+      </td>
+      <td valign="middle" class="td54">
+        <p class="p77"><span class="s16">CD</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td53">
+        <p class="p78"><span class="s17">联机网络（</span>online<span class="s17">）</span></p>
+      </td>
+      <td valign="middle" class="td54">
+        <p class="p77"><span class="s16">OL</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td55">
+        <p class="p79">缩微资料（microform materials）</p>
+      </td>
+      <td valign="middle" class="td56">
+        <p class="p80">MM</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p81">具体格式如下：</p>
+<p class="p82"><b>图书</b></p>
+<p class="p30">[序号] 著者. 书名[M]. 出版地: 出版者, 出版年份: 起止页码.</p>
+<p class="p27">中英文作者均采用姓在前，名在后的形式(下同)。</p>
+<p class="p45">例：</p>
+<p class="p83">吴军. 数学之美[M]. 北京: 人民邮电出版社, 2012: 78-80.</p>
+<p class="p83">哈里森, 沃尔德伦. 经济数学与金融数学[M]. 谢远涛, 译. 北京: 中国人民大学出版社, 2012: 235-236.</p>
+<p class="p83">蒋有绪, 郭泉水, 马娟, 等. 中国森林群落分类及其群落学特征[M]. 北京:<span class="Apple-converted-space">  </span>科学出版社. 1998.</p>
+<p class="p82"><b>期刊</b></p>
+<p class="p84">[序号] 作者. 题名[J]. 期刊名称, 出版年份, 卷号(期号): 起止页码.</p>
+<p class="p85">例：</p>
+<p class="p83">周庆荣, 张泽廷, 朱美文, 等. 固体溶质在含夹带剂超临界流体中的溶解[J]化工学报, 1995, 46(3): 317-323.</p>
+<p class="p83">Ma Z, Liu S. A review of 3D reconstruction techniques in civil engineering and their applications[J]. Advanced Engineering Informatics, 2018, 37: 163-174.</p>
+<p class="p82"><b>报纸</b></p>
+<p class="p38"><span class="s8">[序号]</span> 作者. 题名[N]. 报纸名, 年-月-日(版次).</p>
+<p class="p45">例：</p>
+<p class="p83">国务院新闻办公室. 中国的粮食问题[N]. 人民日报, 1996-10-25(2).</p>
+<p class="p82"><b>会议录、论文集</b></p>
+<p class="p30">[序号] 编者. 文集名[C]. 出版者地点: 出版者, 出版年份, 起止页码(可选项).</p>
+<p class="p45">例：</p>
+<p class="p83">牛志明, Swingland I R, 雷光春. 综合湿地管理：综合湿地管理国际研讨会 <span class="Apple-converted-space">  </span>论文集[C]. 北京：海洋出版社, 2012.</p>
+<p class="p83">汪学军. 中国农业转基因生物研发进展与安全管理[C]//国家环境保护总局 生物安全管理办公室. 中国国家生物安全框架实施国际合作项目研讨会论文集. 北京: 中国环境科学出版社, 2005: 22-25.</p>
+<p class="p83">Yufin S A. Geoecology and Computers: Proceedings of the Third International Conference on Advances of Computer Methods in Geotechnical and Geoenvironmental Engineering, Moscow, Russia, February 1-4, 2000[C]. Rotterdam: A. A. Balkema, 2000.</p>
+<p class="p83">Chen A, Xu Z, Geiger A, et al. Tensorf: Tensorial radiance fields[C]//European Conference on Computer Vision. Cham: Springer Nature Switzerland, 2022: 333-350.</p>
+<p class="p82"><b>学位论文</b></p>
+<p class="p30">[序号] 作者. 文题[D]. 授予单位所在地: 授予单位, 授予年份: 起止页码.</p>
+<p class="p45">例：</p>
+<p class="p83">金宏. 导航系统的精度及容错性能的研究[D]. 北京: 北京航空航天大学, 19<span class="Apple-converted-space">    </span>98: 23-25.</p>
+<p class="p82"><b>报告</b></p>
+<p class="p30">[序号] 作者. 文献题名[R]. 报告地: 报告会主办单位, 年份: 起止页码(可选项).</p>
+<p class="p45">例:<span class="Apple-converted-space"> </span></p>
+<p class="p83">冯西桥. 核反应堆压力容器的LBB分析[R]. 北京: 清华大学核能技术设计研究院, 1997: 2-3.</p>
+<p class="p82"><b>标准</b></p>
+<p class="p86">[序号] 起草责任者. 标准名称: 标准代号 标准顺序号-发布年[S]. 出版地: 出版者, 出版年: 起止页码.（也可略去起草责任者、出版地、出版者、出版年和起止页码）</p>
+<p class="p45">例：</p>
+<p class="p83">全国信息与文献标准化技术委员会. 文献著录: 第4部分 非书资料: GB/T37 <span class="Apple-converted-space">  </span>92.4-2009[S]. 北京: 中国标准出版社, 2010: 3.</p>
+<p class="p82"><b>专利</b></p>
+<p class="p30">[序号] 专利申请者. 专利题名: 专利号[P]. 发布日期: 起止页码(可选项).</p>
+<p class="p45">例：</p>
+<p class="p83">邓一刚. 全智能带电器: CN200610171314.3[P]. 2008-01-16: 8-9.</p>
+<p class="p82"><b>网站、网页</b></p>
+<p class="p30">[序号] 主要责任者. 题名[OL]. [引用日期]. 获取和访问路径.</p>
+<p class="p45">例：</p>
+<p class="p83">中国科学院文献情报中心. 中国科学院科技论文预发布平台[EB/OL]. [2025- <span class="Apple-converted-space">  </span>03-06]. https://chinaxiv.org/home.htm.</p>
+<p class="p82"><b>档案</b></p>
+<p class="p86">[序号] 主要责任者. 档案题名: 档号[A]. 档案保存地: 档案保存单位, 形成年份: 引文页码(可选).</p>
+<p class="p45">例:<span class="Apple-converted-space"> </span></p>
+<p class="p83">李鸿章. 奏请上海道库洋务外销要款无款可筹仍拨药厘接济事: 04-01-35-03<span class="Apple-converted-space">    </span>99-039[A]. 北京: 中国第一历史档案馆, 1887(光绪十三年三月十三日).</p>
+<p class="p82"><b>地图</b></p>
+<p class="p87">[序号] 主要责任者. 地图题名[CM]. 出版地: 出版者, 出版年: 引文页码/具体区域位置(可选).</p>
+<p class="p45">例：</p>
+<p class="p83">谭其骧. 中国历史地图集: 第2册[CM]. 北京: 地图出版社, 1982: 6.</p>
+<p class="p82"><b>数据集</b></p>
+<p class="p88"><span class="s8">[序号] </span>主要责任者. 数据集题名[DS/文献载体标识]. 版本(可选). 发布平台(发布日期或修改日期)[引用日期]. 获取或访问途径.</p>
+<p class="p45">例：</p>
+<p class="p83">彭守璋. 1901-2024年中国1km分辨率逐月降水量数据集[DS/OL]. 国家地球<span class="Apple-converted-space">    </span>系统科学数据中心(2025-07-07)[2025-07-15]. https://www.geodata.cn/main/fa<span class="Apple-converted-space">    </span>ce_science_detail?guid=192891852410344&amp;typeName=face_science.</p>
+<p class="p82"><b>预印本</b></p>
+<p class="p89">[序号] 主要责任者. 题名[PP/文献载体类型标识代码]. 版本(可选). 出版平台(创建或修改日期)[引用日期], 获取或访问途径.</p>
+<p class="p45">例：</p>
+<p class="p83">方向明, 曹迎杰. 元宇宙在图书馆的应用: 理论研究与实践进展[PP/OL]. Ch<span class="Apple-converted-space">    </span>inaXiv(2023-03-03)[2024-09-30], http://www.chinaxiv.org/abs/202303.00020.C<span class="Apple-converted-space">    </span>STR:32003.</p>
+<p class="p82"><b>汇编</b></p>
+<p class="p30">[序号] 编者. 文集名[G]. 出版者地点: 出版者, 出版年份, 起止页码(可选项).</p>
+<p class="p45">例：</p>
+<p class="p83">中国职工教育研究会. 职工教育研究论文集[G]. 北京: 人民教育出版社, 19<span class="Apple-converted-space">    </span>85: 28-29.</p>
+<p class="p82"><b>计算机程序（光盘CD、磁盘DK）</b></p>
+<p class="p89"><span class="s8">[序号] </span>主要责任者. 程序名称[CP/文献载体类型标识代码]. 版本号. 出版地: 出版者, 出版年.</p>
+<p class="p45">例：</p>
+<p class="p83">微软公司. Windows10操作系统[CP/CD]. 专业版V21H2. 北京: 中国电子音 <span class="Apple-converted-space">  </span>像出版社, 2021.</p>
+<p class="p83">Adobe公司. PhotoshopCS6图像处理程序[CP/DK]. V13.0. 北京: 电子工业<span class="Apple-converted-space">    </span>出版社, 2012.</p>
+<p class="p82"><b>数据库（网络）</b></p>
+<p class="p90"><span class="s8">[序号] </span>主要责任者. 数据库题名[DB/文献载体类型标识代码]发布平台（发布日期或修改日期）[引用日期]. 获取或访问途径.</p>
+<p class="p45">例：</p>
+<p class="p91">国家统计局. 国家数据库年度数据[DB/OL]. 国家统计局（2022）[2023-06-1<span class="Apple-converted-space">    </span>0]. https://data.stats.gov.cn/easyquery.htm?cn=C01.</p>
+<p class="p82"><b>其他</b></p>
+<p class="p30">[序号] 主要责任者. 文献题名. 出版地: 出版者, 出版年.</p>
+<p class="p45">例：</p>
+<p class="p83">张永禄. 唐代长安词典[Z]. 西安: 陕西人民出版社, 1980.</p>
+<p class="p92"><br></p>
+<p class="p92"><br></p>
+<p class="p34"><b></b><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p18"><br></p>
+<p class="p23"><b>附 录<span class="Apple-converted-space"> </span></b></p>
+<p class="p27">附录作为主体部分的补充，根据需要添加。格式与正文相同，并依顺序用大写字母 A、B、C、<span class="s18">……</span>编序号，如附录 A，附录 B，附录 C。</p>
+<p class="p27">下列内容可作为附录编于论文后：</p>
+<p class="p27">为了整篇论文材料的完整，但编入正文又有损于编排的条理性和逻辑性，这一类材料包括比正文更为详尽的信息、研究方法和技术更深入的叙述、对了解正文内容有用的补充信息等；<span class="Apple-converted-space"> </span></p>
+<p class="p27">由于篇幅过大或取材于复制品而不便于编入正文的材料；</p>
+<p class="p27">不便于编入正文的罕见珍贵资料；</p>
+<p class="p27">对一般读者并非必要阅读，但对本专业同行有参考价值的资料；</p>
+<p class="p27">某些重要的原始数据、数学推导、结构图、统计表、视频、音频、数据集等。</p>
+<p class="p34"><b></b><br></p>
+<p class="p8"><br></p>
+<p class="p23"><span class="s5"></span><b>作者简历及在学期间取得的创新性成果</b><b></b></p>
+<p class="p27">本部分格式如下：中文宋体、英文及数字Times New Roman，小四号，一级标题和二级标题加粗，1.5倍行距。</p>
+<p class="p30"><b>教育经历</b></p>
+<p class="p45">例：</p>
+<p class="p93">2018年9月至2022年6月在湖南文理学院计算机科学与技术专业学习并获得学士学位。</p>
+<p class="p93">2022年9月至今就读于湖州师范大学信息工程学院，攻读硕士学位。 <span class="Apple-converted-space">  </span><span class="s8"><span class="Apple-converted-space"> </span></span></p>
+<p class="p30"><b>在学期间取得的创新性成果</b></p>
+<p class="p30"><b>科研项目</b></p>
+<p class="p27">项目名称，项目来源，起止日期，排名1/4。</p>
+<p class="p45">例：</p>
+<p class="p91">基于机器视觉的成缆关键参数在线监测方法研究，湖州师范大学研究生科研创新项目，2024.5-2025.5，排名1/4。</p>
+<p class="p30"><b>学术论文</b></p>
+<p class="p45">按照参考文献格式撰写，例：</p>
+<p class="p83">李炳穆. 理想的图书馆员和信息专家的素质与形象[J]. 图书情报工作, 2024,<span class="Apple-converted-space">  </span>37: 163-174.（发表）</p>
+<p class="p83">廖建新. 移动智能网技术的研发现状及未来发展[J]. 电子学报, 2025.（录用）</p>
+<p class="p83">Wong V, Leung V. Location management for next generation personal communication networks[J]. IEEE Network, 2025.（在投）</p>
+<p class="p30"><b>专利</b></p>
+<p class="p45">按照参考文献格式撰写，例：</p>
+<p class="p83">姜锡洲. 一种热温外敷药制备方案: 881056073[P]. 1989-07-26.（授权）</p>
+<p class="p83">刘加林. 多功能一次性压力板[P].（实审）</p>
+<p class="p30"><b>获奖情况</b></p>
+<p class="p27">项目名称，奖项名称，颁发机构，获奖年份，排名。</p>
+<p class="p94">例：</p>
+<p class="p91">一种无人机模型的设计方案，浙江省专业学位研究生优秀创新成果，浙江省研究生教育学会，2024年，排名1/4。</p>
+<p class="p30"><b>其他</b></p>
+<p class="p91">......</p>
+<p class="p95"><br></p>
+<p class="p96"><b></b><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p23"><span class="s5"></span><b>致 谢</b></p>
+<p class="p27">致谢的格式和正文相同。致谢主要感谢对学位论文的编写或相关工作的开展等给予帮助的组织和个人，包括但不限于：</p>
+<p class="p27">国家科学基金，资助研究工作的奖学金基金，合同单位，资助或支持的企业、组织或个人；</p>
+<p class="p27">协助完成研究工作和提供便利条件的组织或个人；</p>
+<p class="p27">在研究工作中提出建议和提供帮助的人；</p>
+<p class="p27">给予转载和引用权的资料、图片、文献、研究思想和设想的所有者；</p>
+<p class="p27">其他应感谢的组织和个人。</p>
+<p class="p27">致谢应实事求是，切忌浮夸与庸俗之辞。</p>
+<p class="p8"><br></p>
+<p class="p97"><span class="Apple-converted-space">                                              </span>20**年*月</p>
+<p class="p98"><br></p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p63"><br></p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p17"><br></p>
+<p class="p63"><br></p>
+<p class="p99"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p101"><br></p>
+<p class="p102"><br></p>
+<p class="p103"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p104"><br></p>
+<p class="p99"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p101"><br></p>
+<p class="p102"><br></p>
+<p class="p99"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p103"><br></p>
+<p class="p104"><br></p>
+<p class="p105">论文题目</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p106">湖州师范大学硕士学位论文</p>
+<p class="p102"><br></p>
+<p class="p99"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p103"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
+<p class="p104"><br></p>
+<p class="p99"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p99"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p105">论文题目</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p106">湖州师范大学硕士学位论文</p>
+<p class="p102"><br></p>
+<p class="p99"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p99"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p107"><br></p>
+<p class="p108">UDC分类号可在网（https://udcsummary.info/php/index.php）查询，该网站右上角57种语言中选择“Chinese（中文）”，建议根据论文方向在004目录下选择。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">指导教师：姓名+职称，如有二导一并填写。学位类型：学硕填学术学位，专硕填专业学位。学科专业：学硕填计算机科学与技术，专硕填计算机技术。研究方向：按照培养方案里选定的方向填写，不要自创。提交日期：具体日期以实际提交时间为准。</p>
+<p class="p108">中文字体：楷体、英文及数字：Times New Roman，三号，居中，单倍行距。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">如有二导，一并签名。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">中文字体：宋体、英文及数字：Times New Roman，小四号，两端对齐，1.5倍行距。3-5个关键词。</p>
+<p class="p8"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">前置部分摘要开始加页码：罗马数字，Times New Roman，五号，居中。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">Times New Roman，小四号，两端对齐，1.5倍行距，标点符号后空一格。</p>
+<p class="p8"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">每个关键词中每个单词首字母大写。</p>
+<p class="p8"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p109">在该页面中点击鼠标右键，选择“更新域…”，在弹出窗口中选择“更新整个目录”，确定即可自动生成目录。各层次标题一律用阿拉伯数字连续标号；不同层次的数字之间用小圆点“．”相隔，末位数字后面不加点号，如“1”，“1.1”，“1.1.1”等。<span class="s20">一级标题加粗，中文字体：宋体、英文及数字：Times New Roman，小四号，两端对齐，1.5倍行距。</span></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">中文字体：宋体、英文及数字：Times New Roman，小四号，两端对齐，1.5倍行距。</p>
+<p class="p108">注：插图清单、附表清单、缩略词表等部分按需列出，如还有符号表、标志表、首字母缩写表、计量单位表、术语表等，可依次置于图表清单之后。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">中文字体：宋体、英文及数字：Times New Roman，小四号，两端对齐，1.5倍行距。</p>
+<p class="p18"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">中文字体：宋体、英文及数字：Times New Roman，小四号，单倍行距，行高0.85cm。三线表首线、底线1.5磅，栏线0.5磅。</p>
+<p class="p18"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">正文开始加页眉：宋体，五号，单倍行距，奇数页为：湖州师范大学硕士学位论文。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">一级标题格式：段前段后各空1行，标号后空2格，中文黑体、英文及数字Times New Roman，小三号，加粗，居中，1.5倍行距。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">正文内容格式：首行缩进2个字符，中文宋体、英文及数字Times New Roman，小四号，两端对齐，1.5倍行距。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">二级标题格式：左起顶格，标号后空2格，中文宋体、英文及数字Times New Roman，四号，加粗，1.5倍行距。</p>
+<p class="p8"><br></p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">三级标题格式：左起顶格，标号后空2格，中文宋体、英文及数字Times New Roman，小四号，加粗，1.5倍行距。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">正文部分开始页脚页码：阿拉伯数字，左右加短横线，Times New Roman，五号，居中。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p110">页眉：宋体，五号，单倍行距，偶数页为论文题目。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">三线表首线、底线1.5磅，栏线0.5磅。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">序号后空一格，中文字体：宋体、英文及数字：Times New Roman，小四号，1.5倍行距，两端对齐，换行后每行首字或首字母对齐。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">1、2、3分别为一般形式、译著形式和三个作者以上形式。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p108">人名姓在前，姓的首字母大写；名仅列出首字母并大写。仅论文题目第一个单词首字母大写，其他都小写。期刊名每个单词首字母大写（介词除外）。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p110">从本专科开始写。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p110">学位论文作者，加黑。</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p107"><br></p>
+<p class="p105"><span class="Apple-converted-space"> </span>PAGE<span class="Apple-converted-space">  </span>\* MERGEFORMAT II</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p105"><span class="Apple-converted-space"> </span>PAGE<span class="Apple-converted-space">  </span>\* MERGEFORMAT I</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p105">—<span class="Apple-converted-space">  </span>PAGE<span class="Apple-converted-space">  </span>\* MERGEFORMAT II —</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p105">—<span class="Apple-converted-space">  </span>PAGE<span class="Apple-converted-space">  </span>\* MERGEFORMAT I —</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p105">—<span class="Apple-converted-space">  </span>PAGE<span class="Apple-converted-space">  </span>\* MERGEFORMAT IV —</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p105">—<span class="Apple-converted-space">  </span>PAGE<span class="Apple-converted-space">  </span>\* MERGEFORMAT I —</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p105">—<span class="Apple-converted-space">  </span>PAGE<span class="Apple-converted-space">  </span>\* MERGEFORMAT VI —</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p105">—<span class="Apple-converted-space">  </span>PAGE<span class="Apple-converted-space">  </span>\* MERGEFORMAT V —</p>
+<p class="p100"><span class="s19"></span><br></p>
+<p class="p107"><br></p>
+<p class="p63"><br></p>
+</body>
+</html>
