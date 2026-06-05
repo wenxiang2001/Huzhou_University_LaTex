@@ -28,6 +28,7 @@
 \RequirePackage{etoolbox}
 \RequirePackage[numbers,sort&compress,super]{natbib}
 \RequirePackage[hidelinks]{hyperref}
+\setcitestyle{super,open={[},close={]}}
 \pdfstringdefDisableCommands{%
   \def\quad{ }%
   \def\qquad{ }%
@@ -124,6 +125,8 @@
 \newcommand{\hznucnabstractfont}{\songti\zihao{-4}\setstretch{\hznulinefactor}}
 \newcommand{\hznuenabstractfont}{\hznutimes\zihao{-4}\setstretch{\hznulinefactor}}
 \newcommand{\hznutablefont}{\songti\zihao{5}\setstretch{1}}
+\newcommand{\hznutableheadfont}{\songticu\zihao{5}\setstretch{1}}
+\newcommand{\hznutablehead}[1]{{\hznutableheadfont #1}}
 
 \renewcommand{\title}[1]{\gdef\hznu@title{#1}\hypersetup{pdftitle={#1}}}
 \renewcommand{\author}[1]{\gdef\hznu@author{#1}\hypersetup{pdfauthor={#1}}}
@@ -190,7 +193,7 @@
   \leaders\hbox{\hskip 0.005em{\textcolor{black!82}{\normalfont\scalebox{1.18}{.}}}\hskip 0.06em}\hfill
 }
 \newcommand{\hznutocdarkdotfill}{%
-  \leaders\hbox{\hskip 0.005em{\textcolor{black!90}{\normalfont\bfseries\scalebox{1.28}{.}}}\hskip 0.06em}\hfill
+  \leaders\hbox{\hskip 0.005em{\textcolor{black!90}{\normalfont\bfseries\scalebox{1.13}{.}}}\hskip 0.06em}\hfill
 }
 \renewcommand{\cftchapleader}{\hznutocdarkdotfill}
 \renewcommand{\cftsecleader}{\hznulightdotfill}
@@ -238,7 +241,7 @@
 \newsavebox{\hznu@threelinebox}
 \newenvironment{hznuthreelinetable}[1]{%
   \begin{lrbox}{\hznu@threelinebox}%
-  \begin{tabular*}{1.06\textwidth}{@{\extracolsep{\fill}}#1@{}}
+  \begin{tabular*}{1.00\textwidth}{@{\hspace{0.8em}\extracolsep{\fill}}#1@{\hspace{0.8em}}}
 }{%
   \end{tabular*}%
   \end{lrbox}%
@@ -252,15 +255,15 @@
   \setlength{\LTright}{0pt plus 1fill}%
   \setlength{\LTpre}{0pt}%
   \setlength{\LTpost}{0pt}%
-  \begin{longtable}{@{}#3@{}}
+  \begin{longtable}{@{\hspace{0.8em}}#3@{\hspace{0.8em}}}
   \caption{#1}\label{#2}\\
   \toprule
-  #4\\
+  #4\\[-0.25ex]
   \midrule
   \endfirsthead
   \caption[]{（续）}\\
   \toprule
-  #4\\
+  #4\\[-0.25ex]
   \midrule
   \endhead
   \bottomrule
@@ -285,12 +288,12 @@
 }
 \fancypagestyle{hznu@main}{
   \fancyhf{}
-  \fancyhead[CO]{\textcolor{black!55}{\songti\zihao{5}湖州师范大学硕士学位论文}}
-  \fancyhead[CE]{\textcolor{black!55}{\songti\zihao{5}\hznu@title}}
+  \fancyhead[CO]{\songti\zihao{5}湖州师范大学硕士学位论文}
+  \fancyhead[CE]{\songti\zihao{5}\hznu@title}
   \fancyfoot[C]{\hznutimes\zihao{5}\textemdash\ \thepage\ \textemdash}
   \renewcommand{\headrulewidth}{0.4pt}
   \renewcommand{\headrule}{%
-    {\color{black!45}\hrule width\headwidth height\headrulewidth}%
+    {\color{black}\hrule width\headwidth height\headrulewidth}%
     \vskip-\headrulewidth
   }
   \renewcommand{\footrulewidth}{0pt}
@@ -458,13 +461,13 @@
   \songti\zihao{-4}\setstretch{1}%
   \renewcommand{\arraystretch}{2.0}%
   \begin{hznuthreelinetable}{%
-    >{\centering\arraybackslash\hznutimes}p{0.18\textwidth}%
-    >{\centering\arraybackslash\hznutimes}p{0.48\textwidth}%
+    >{\centering\arraybackslash\hznutimes}p{0.16\textwidth}%
+    >{\centering\arraybackslash\hznutimes}p{0.46\textwidth}%
     >{\centering\arraybackslash\songti}p{0.24\textwidth}%
   }
-  \toprule
-  {\songticu 缩略词} & {\songticu 英文全称} & {\songticu 中文全称}\\
-  \midrule
+  \toprule\\[-7.8ex]
+  \hznutablehead{缩略词} & \hznutablehead{英文全称} & \hznutablehead{中文全称}\\[-0.9ex]
+  \midrule\\[-7ex]
 }{%
   \bottomrule
   \end{hznuthreelinetable}
