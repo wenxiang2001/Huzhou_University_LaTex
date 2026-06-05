@@ -59,21 +59,24 @@
   ItalicFont=timesi.ttf,
   BoldItalicFont=timesbi.ttf
 ]{Times New Roman}
+
+% Songti bold is rendered by emboldening SimSun itself. Use \heiti explicitly
+% where the template requires HeiTi instead of relying on \songti+\bfseries.
+\newcommand{\hznusongboldfactor}{5.0}
 \newfontfamily\hznusonglatin[
   Path=fonts/,
   FontIndex=0,
-  AutoFakeBold=2.5
+  AutoFakeBold=\hznusongboldfactor
 ]{simsun.ttc}
 
 \setCJKmainfont[
   Path=fonts/,
   UprightFont=simsun.ttc,
   UprightFeatures={FontIndex=0},
-  BoldFont=simhei.ttf,
+  AutoFakeBold=\hznusongboldfactor,
   ItalicFont=simkai.ttf
 ]{SimSun}
-\setCJKfamilyfont{hznusong}[Path=fonts/,FontIndex=0,BoldFont=simhei.ttf,ItalicFont=simkai.ttf]{simsun.ttc}
-\setCJKfamilyfont{hznusongfakebold}[Path=fonts/,FontIndex=0,AutoFakeBold=5.0]{simsun.ttc}
+\setCJKfamilyfont{hznusong}[Path=fonts/,FontIndex=0,AutoFakeBold=\hznusongboldfactor,ItalicFont=simkai.ttf]{simsun.ttc}
 \setCJKfamilyfont{hznuhei}[Path=fonts/,AutoFakeBold=2.5]{simhei.ttf}
 \setCJKfamilyfont{hznukai}[Path=fonts/,AutoFakeBold=2.5]{simkai.ttf}
 \setCJKfamilyfont{hznufang}[Path=fonts/,AutoFakeBold=2.5]{simfang.ttf}
@@ -86,7 +89,7 @@
 \renewcommand{\heiti}{\CJKfamily{hznuhei}}
 \renewcommand{\kaishu}{\CJKfamily{hznukai}}
 \renewcommand{\fangsong}{\CJKfamily{hznufang}}
-\newcommand{\songticu}{\CJKfamily{hznusongfakebold}}
+\newcommand{\songticu}{\songti\bfseries}
 
 \newcommand{\hznu@classification}{TP39}
 \newcommand{\hznu@udc}{}
@@ -418,10 +421,8 @@
   \par\vspace{1em}\noindent{\heiti 关键词：}{\songti #1}\par
 }
 \newcommand{\enkeywords}[1]{%
-  \par\vspace{1em}\noindent
-  \begin{minipage}[t]{\textwidth}
-    {\hznutimes\bfseries Key Words: }{\hznutimes\raggedright #1\par}
-  \end{minipage}\par
+  \par\vspace{1em}{\hznutimes\raggedright\noindent\hspace*{2em}%
+  {\bfseries Key Words: }#1\par}%
 }
 
 \newenvironment{abbreviations}{%
@@ -434,7 +435,7 @@
     >{\centering\arraybackslash\songti}p{0.24\textwidth}%
   }
   \toprule
-  {\songticu\bfseries 缩略词} & {\songticu\bfseries 英文全称} & {\songticu\bfseries 中文全称}\\
+  {\songticu 缩略词} & {\songticu 英文全称} & {\songticu 中文全称}\\
   \midrule
 }{%
   \bottomrule
