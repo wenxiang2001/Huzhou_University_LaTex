@@ -256,6 +256,11 @@
 }
 \captionsetup[figure]{position=bottom,skip=6pt}
 \captionsetup[table]{position=top,skip=6pt}
+\AtBeginDocument{%
+  \setlength{\intextsep}{\baselineskip}%
+  \setlength{\textfloatsep}{\baselineskip}%
+  \setlength{\floatsep}{\baselineskip}%
+}
 \setlength{\heavyrulewidth}{1.5pt}
 \setlength{\lightrulewidth}{0.5pt}
 \setlength{\cmidrulewidth}{0.5pt}
