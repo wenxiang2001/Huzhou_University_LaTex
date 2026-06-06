@@ -1,1 +1,41 @@
-./build/
+# macOS / editor
+.DS_Store
+._*
+*~
+~$*
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+*.nav
+*.snm
+*.vrb
+# Index / glossary artifacts
+*.idx
+*.ilg
+*.ind
+*.ist
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+# Generated output and local inspection files
+/main.pdf
+/build/
+# Original school template/reference files kept locally only
+*.doc
+*.docx
+/湖州师范大学硕士学位论文撰写模版（信工2026年4月版）.pdf

@@ -1,10 +1,28 @@
-# 湖州师范大学硕士学位论文 LaTeX 模板
+# 湖州师范大学硕士学位论文 LaTeX 初稿模板
 
-本目录包含从学院 Word/PDF 模板整理出的 LaTeX 版本：独立类文件 `hznu-thesis.cls`、示例主文件 `main.tex`、参考文献示例 `references.bib`、本地字体目录 `fonts/` 和封面图片目录 `pics/`。
+本项目参照“湖州师范大学硕士学位论文撰写模版（信工2026年4月版）”完成。学校的 Word 模板后期很有可能继续调整，因此本项目不保证永远与学校最新要求完全一致。
 
-## 编译
+必须注意：最后提交大论文必须提交 Word 版本。本项目只是为了使用 LaTeX、Git、AI等“现代工具”快速撰写、排版和管理论文初稿，后期必须转移到 Word 模板中，并以学校最终发布的 Word 模板为准进行检查和提交。
 
-请使用 XeLaTeX：
+## 文件结构
+
+- `hznu-thesis.cls`：论文模板类文件，包含封面、声明页、摘要、目录、页眉页脚、章节标题、图表、参考文献等格式设置。
+- `main.tex`：论文主文件和示例内容，实际写作时主要修改这里。
+- `references.bib`：BibTeX 参考文献示例。
+- `fonts/`：模板当前使用的本地字体文件。
+- `pics/`：封面使用的学校名和校徽图片。
+
+`build/`、`main.pdf`、`.aux`、`.log`、`.toc` 等文件都是编译或检查时生成的临时文件，不需要提交到 GitHub。
+
+## 编译方式
+
+请使用 XeLaTeX 编译：
+
+```bash
+latexmk -xelatex -interaction=nonstopmode main.tex
+```
+
+也可以手动编译：
 
 ```bash
 xelatex main.tex
@@ -13,7 +31,7 @@ xelatex main.tex
 xelatex main.tex
 ```
 
-生成结果为 `main.pdf`。模板使用 `gbt7714-numerical` 参考文献样式，TeX Live 2025 已包含该样式。
+生成结果为 `main.pdf`。
 
 ## 文件说明
 
@@ -43,8 +61,8 @@ xelatex main.tex
 如要替换封面学校名或校徽，在 `main.tex` 导言区写：
 
 ```latex
-\schoolnamepic{pics/你的学校名图片.pdf}
-\logopic{pics/你的校徽.pdf}
+\schoolnamepic{pics/school-name.pdf}
+\logopic{pics/logo.pdf}
 ```
 
 ## 微调字体
@@ -73,4 +91,4 @@ xelatex main.tex
 \renewcommand{\hznucaptionfont}{\songti\zihao{-5}}
 ```
 
-模板已去除原 Word/PDF 中的紫色说明批注；这些说明已转化为类文件默认格式和示例用法。
+建议用本项目完成论文初稿、公式、图表、引用和版本管理。定稿前请把内容迁移到学校要求的 Word 模板中，并逐项核对封面、目录、摘要、页眉页脚、图表题注、参考文献和附录等格式。
