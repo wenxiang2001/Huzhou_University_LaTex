@@ -35,11 +35,5 @@
 *.glo
 *.gls
 
-# Generated output and local inspection files
-/main.pdf
 /build/
 
-# Original school template/reference files kept locally only
-*.doc
-*.docx
-/湖州师范大学硕士学位论文撰写模版（信工2026年4月版）.pdf

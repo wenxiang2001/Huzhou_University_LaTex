@@ -255,6 +255,8 @@
   singlelinecheck=false
 }
 \captionsetup[figure]{position=bottom,skip=6pt}
+\setlength{\belowcaptionskip}{-16pt}
+
 \captionsetup[table]{position=top,skip=6pt}
 \AtBeginDocument{%
   \setlength{\intextsep}{\baselineskip}%
