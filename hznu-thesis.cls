@@ -259,9 +259,9 @@
 
 \captionsetup[table]{position=top,skip=6pt}
 \AtBeginDocument{%
-  \setlength{\intextsep}{1.2\baselineskip}%
-  \setlength{\textfloatsep}{1.2\baselineskip}%
-  \setlength{\floatsep}{1.2\baselineskip}%
+  \setlength{\intextsep}{1.5\baselineskip}%
+  \setlength{\textfloatsep}{1.5\baselineskip}%
+  \setlength{\floatsep}{1.5\baselineskip}%
 }
 \setlength{\heavyrulewidth}{1.5pt}
 \setlength{\lightrulewidth}{0.5pt}
