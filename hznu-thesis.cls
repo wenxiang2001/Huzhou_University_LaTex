@@ -475,7 +475,7 @@
 }{\clearpage}
 
 \newcommand{\cnkeywords}[1]{%
-  \par\vspace{1em}\noindent{\heiti 关键词：}{\songti #1}\par
+  \par\vspace{1em}{\heiti 关键词：}{\songti #1}\par
 }
 \newcommand{\enkeywords}[1]{%
   \par\vspace{1em}{\hznutimes\noindent\hspace*{2em}%
