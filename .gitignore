@@ -3,6 +3,7 @@
 ._*
 *~
 ~$*
+
 # LaTeX build artifacts
 *.aux
 *.bbl
@@ -21,6 +22,7 @@
 *.nav
 *.snm
 *.vrb
+
 # Index / glossary artifacts
 *.idx
 *.ilg
@@ -32,9 +34,11 @@
 *.glg
 *.glo
 *.gls
+
 # Generated output and local inspection files
 /main.pdf
 /build/
+
 # Original school template/reference files kept locally only
 *.doc
 *.docx
