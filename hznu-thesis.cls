@@ -258,10 +258,36 @@
 \setlength{\belowcaptionskip}{-16pt}
 
 \captionsetup[table]{position=top,skip=6pt}
+
+% 三线表距离控制：
+% 1. 页首距离：表格浮到页面顶部时，页眉线到表题之间的额外距离。
+% 2. 正文距离：正文与单个表格之间的距离。
+% 3. 表表距离：连续两个浮动表格之间的距离。
+\newcommand{\hznutablepagetopsep}{1.5\baselineskip}
+\newcommand{\hznutabletextsep}{2.5\baselineskip}
+\newcommand{\hznutabletablesep}{2.5\baselineskip}
+
+% 三线表内部行距。只影响表格内部，不影响表格与正文/页眉/其他表格的距离。
+\newcommand{\hznutablearraystretch}{1.2}
+\newcommand{\hznu@threelinetable@setup}{%
+  \renewcommand{\arraystretch}{\hznutablearraystretch}%
+  \setlength{\aboverulesep}{0.35ex}%
+  \setlength{\belowrulesep}{0.55ex}%
+}
 \AtBeginDocument{%
-  \setlength{\intextsep}{1.5\baselineskip}%
-  \setlength{\textfloatsep}{1.5\baselineskip}%
-  \setlength{\floatsep}{1.5\baselineskip}%
+  \setlength{\intextsep}{\hznutabletextsep}%
+  \setlength{\textfloatsep}{\hznutabletextsep}%
+  \setlength{\floatsep}{\hznutabletablesep}%
+  \setlength{\@fptop}{\hznutablepagetopsep}%
+  \setlength{\@fpsep}{\hznutabletablesep}%
+  \setlength{\@fpbot}{0pt plus 1fil}%
+  \patchcmd{\@cflt}%
+    {\boxmaxdepth \maxdepth
+                             \unvbox\@tempboxa}%
+    {\boxmaxdepth \maxdepth
+                             \vskip \hznutablepagetopsep
+                             \unvbox\@tempboxa}%
+    {}{\ClassWarning{hznu-thesis}{Failed to patch top float spacing}}%
 }
 \setlength{\heavyrulewidth}{1.5pt}
 \setlength{\lightrulewidth}{0.5pt}
@@ -269,11 +295,12 @@
 \setlength{\extrarowheight}{0pt}
 \AtBeginEnvironment{table}{%
   \hznutablefont
-  \renewcommand{\arraystretch}{2.0}%
+  \hznu@threelinetable@setup
 }
 \newsavebox{\hznu@threelinebox}
 \newenvironment{hznuthreelinetable}[1]{%
   \begin{lrbox}{\hznu@threelinebox}%
+  \hznu@threelinetable@setup
   \begin{tabular*}{1.00\textwidth}{@{\hspace{0.8em}\extracolsep{\fill}}#1@{\hspace{0.8em}}}
 }{%
   \end{tabular*}%
@@ -283,7 +310,7 @@
 \newenvironment{hznulongthreelinetable}[4]{%
   \begingroup
   \hznutablefont
-  \renewcommand{\arraystretch}{2.0}%
+  \hznu@threelinetable@setup
   \setlength{\LTleft}{0pt plus 1fill}%
   \setlength{\LTright}{0pt plus 1fill}%
   \setlength{\LTpre}{0pt}%
@@ -291,12 +318,12 @@
   \begin{longtable}{@{\hspace{0.8em}}#3@{\hspace{0.8em}}}
   \caption{#1}\label{#2}\\
   \toprule
-  #4\\[-0.25ex]
+  #4\\
   \midrule
   \endfirsthead
   \caption[]{（续）}\\
   \toprule
-  #4\\[-0.25ex]
+  #4\\
   \midrule
   \endhead
   \bottomrule
@@ -492,15 +519,14 @@
 \newenvironment{abbreviations}{%
   \hznu@frontchapter{缩略词表}%
   \songti\zihao{-4}\setstretch{1}%
-  \renewcommand{\arraystretch}{2.0}%
   \begin{hznuthreelinetable}{%
     >{\centering\arraybackslash\hznutimes}p{0.16\textwidth}%
     >{\centering\arraybackslash\hznutimes}p{0.46\textwidth}%
     >{\centering\arraybackslash\songti}p{0.24\textwidth}%
   }
-  \toprule\\[-7.8ex]
-  \hznutablehead{缩略词} & \hznutablehead{英文全称} & \hznutablehead{中文全称}\\[-0.9ex]
-  \midrule\\[-7ex]
+  \toprule
+  \hznutablehead{缩略词} & \hznutablehead{英文全称} & \hznutablehead{中文全称}\\
+  \midrule
 }{%
   \bottomrule
   \end{hznuthreelinetable}
