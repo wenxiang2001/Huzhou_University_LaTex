@@ -270,6 +270,14 @@
 \newcommand{\hznutabletextsep}{3.5\baselineskip}
 \newcommand{\hznutabletablesep}{1.5\baselineskip}
 
+% 手动微调：放在 table 环境内部、\end{table} 之前才会随浮动体生效。
+% 用于表格后面紧接普通正文，允许正值或负值。
+\newcommand{\hznutablebelowtextsep}{-40pt}
+\newcommand{\hznutablefollowedbytext}{\vspace{\hznutablebelowtextsep}}
+% 用于表格后面紧接 chapter/section/subsection 等标题，允许正值或负值。
+\newcommand{\hznutablebelowheadingsep}{-50pt}
+\newcommand{\hznutablefollowedbyheading}{\vspace{\hznutablebelowheadingsep}}
+
 % 三线表内部行距。只影响表格内部，不影响表格与正文/页眉/其他表格的距离。
 \newcommand{\hznutablearraystretch}{1.2}
 \newcommand{\hznutableabbrevarraystretch}{2.0}
