@@ -259,35 +259,176 @@
 
 \captionsetup[table]{position=top,skip=6pt}
 
+% 图和普通浮动体使用这一组全局距离，避免三线表调距影响图片。
+\newcommand{\hznugeneralfloatsep}{1.5\baselineskip}
+
 % 三线表距离控制：
 % 1. 页首距离：表格浮到页面顶部时，页眉线到表题之间的额外距离。
 % 2. 正文距离：正文与单个表格之间的距离。
 % 3. 表表距离：连续两个浮动表格之间的距离。
 \newcommand{\hznutablepagetopsep}{1.5\baselineskip}
-\newcommand{\hznutabletextsep}{2.5\baselineskip}
-\newcommand{\hznutabletablesep}{2.5\baselineskip}
+\newcommand{\hznutabletextsep}{3.5\baselineskip}
+\newcommand{\hznutabletablesep}{1.5\baselineskip}
 
 % 三线表内部行距。只影响表格内部，不影响表格与正文/页眉/其他表格的距离。
 \newcommand{\hznutablearraystretch}{1.2}
+\newcommand{\hznutableabbrevarraystretch}{2.0}
 \newcommand{\hznu@threelinetable@setup}{%
   \renewcommand{\arraystretch}{\hznutablearraystretch}%
   \setlength{\aboverulesep}{0.35ex}%
   \setlength{\belowrulesep}{0.55ex}%
 }
+\newif\ifhznu@tablefloatlist
+\newif\ifhznu@tablefloatpage
+\newif\ifhznu@floatpagefirst
+\newdimen\hznu@lastfloatsep
+\newdimen\hznu@firstfloatsep
+\newcommand{\hznu@ifcurrtablefloat}[2]{%
+  \ifnum\@currtype=\numexpr\csname ftype@table\endcsname*32\relax #1\else #2\fi
+}
+\newcommand{\hznu@ifboxtablefloat}[3]{%
+  \@tempcnta\count#1\relax
+  \divide\@tempcnta\@xxxii
+  \multiply\@tempcnta\@xxxii
+  \ifnum\@tempcnta=\numexpr\csname ftype@table\endcsname*32\relax #2\else #3\fi
+}
+\newcommand{\hznu@currfloattextsep}{\hznu@ifcurrtablefloat{\hznutabletextsep}{\intextsep}}
+\newcommand{\hznu@currfloatlistsep}[1]{%
+  \hznu@ifcurrtablefloat
+    {\ifx#1\@empty\hznutabletextsep\else\hznutabletablesep\fi}%
+    {\ifx#1\@empty\textfloatsep\else\floatsep\fi}%
+}
+\newcommand{\hznu@floatlisttextsep}{%
+  \ifhznu@tablefloatlist\hznutabletextsep\else\textfloatsep\fi
+}
+\def\@comflelt#1{%
+  \hznu@ifboxtablefloat{#1}{%
+    \global\hznu@tablefloatlisttrue
+    \global\hznu@lastfloatsep=\hznutabletablesep
+  }{%
+    \global\hznu@lastfloatsep=\floatsep
+  }%
+  \setbox\@tempboxa\vbox{\unvbox\@tempboxa\box#1\vskip\hznu@lastfloatsep}%
+}
+\def\@wtryfc#1{%
+  \hznu@ifboxtablefloat{#1}{%
+    \global\hznu@lastfloatsep=\hznutabletablesep
+    \ifhznu@floatpagefirst
+      \global\hznu@tablefloatpagetrue
+    \fi
+  }{%
+    \global\hznu@lastfloatsep=\@fpsep
+  }%
+  \ifhznu@floatpagefirst
+    \global\hznu@firstfloatsep=\hznu@lastfloatsep
+    \global\hznu@floatpagefirstfalse
+  \fi
+  \global\setbox\@outputbox\vbox{%
+    \unvbox\@outputbox
+    \vskip\hznu@lastfloatsep
+    \box #1}%
+}
+\def\@vtryfc #1{%
+  \global\setbox\@outputbox\vbox{}%
+  \global\hznu@tablefloatpagefalse
+  \global\hznu@floatpagefirsttrue
+  \let\@elt\@wtryfc
+  \@flsucceed
+  \global\setbox\@outputbox \vbox to\@colht{%
+    \ifhznu@tablefloatpage
+      \vskip \hznutablepagetopsep
+    \else
+      \vskip \@fptop
+    \fi
+    \vskip -\hznu@firstfloatsep
+    \unvbox \@outputbox
+    \vskip \@fpbot}%
+  \let\@elt\relax
+  \xdef #1{\@failedlist\@flfail}%
+  \xdef\@freelist{\@freelist\@flsucceed}%
+}
+\def\@flcheckspace #1#2{%
+   \advance \@reqcolroom \hznu@currfloatlistsep{#2}%
+   \ifdim \@colroom>\@reqcolroom
+     \ifdim #1>\ht\@currbox
+       \@tempswatrue
+     \else
+       \ifnum \@fpstype<\sixt@@n
+         \@tempswatrue
+       \fi
+     \fi
+   \fi
+}
+\def\@flupdates #1#2#3{%
+   \global \advance #1\m@ne
+   \global \advance \@colnum \m@ne
+   \@tempdima -\ht\@currbox
+   \advance \@tempdima -\hznu@currfloatlistsep{#3}%
+   \global \advance #2\@tempdima
+   \global \advance \@colroom \@tempdima
+   \@cons #3\@currbox
+}
 \AtBeginDocument{%
-  \setlength{\intextsep}{\hznutabletextsep}%
-  \setlength{\textfloatsep}{\hznutabletextsep}%
-  \setlength{\floatsep}{\hznutabletablesep}%
-  \setlength{\@fptop}{\hznutablepagetopsep}%
-  \setlength{\@fpsep}{\hznutabletablesep}%
-  \setlength{\@fpbot}{0pt plus 1fil}%
+  \setlength{\intextsep}{\hznugeneralfloatsep}%
+  \setlength{\textfloatsep}{\hznugeneralfloatsep}%
+  \setlength{\floatsep}{\hznugeneralfloatsep}%
+  \patchcmd{\@addtocurcol}%
+    {\advance \@reqcolroom \intextsep}%
+    {\advance \@reqcolroom \hznu@currfloattextsep}%
+    {}{\ClassWarning{hznu-thesis}{Failed to patch in-text float required room}}%
+  \patchcmd{\@addtocurcol}%
+    {\global \advance \@textfloatsheight 2\intextsep}%
+    {\global \advance \@textfloatsheight 2\hznu@currfloattextsep}%
+    {}{\ClassWarning{hznu-thesis}{Failed to patch in-text float height}}%
+  \patchcmd{\@addtocurcol}%
+    {\vskip \intextsep
+                   \box\@currbox}%
+    {\vskip \hznu@currfloattextsep
+                   \box\@currbox}%
+    {}{\ClassWarning{hznu-thesis}{Failed to patch in-text float before skip}}%
+  \patchcmd{\@addtocurcol}%
+    {\vskip\intextsep}%
+    {\vskip\hznu@currfloattextsep}%
+    {}{\ClassWarning{hznu-thesis}{Failed to patch in-text float after skip}}%
+  \patchcmd{\@cflt}%
+    {\setbox\@tempboxa \vbox{}%
+    \@toplist}%
+    {\setbox\@tempboxa \vbox{}%
+    \global\hznu@tablefloatlistfalse
+    \@toplist}%
+    {}{\ClassWarning{hznu-thesis}{Failed to patch top float list reset}}%
   \patchcmd{\@cflt}%
     {\boxmaxdepth \maxdepth
-                             \unvbox\@tempboxa}%
+                             \unvbox\@tempboxa
+                             \vskip -\floatsep
+                             \topfigrule
+                             \vskip \textfloatsep
+                             \unvbox\@outputbox}%
     {\boxmaxdepth \maxdepth
-                             \vskip \hznutablepagetopsep
-                             \unvbox\@tempboxa}%
+                             \ifhznu@tablefloatlist\vskip \hznutablepagetopsep\fi
+                             \unvbox\@tempboxa
+                             \vskip -\hznu@lastfloatsep
+                             \topfigrule
+                             \vskip \hznu@floatlisttextsep
+                             \unvbox\@outputbox}%
     {}{\ClassWarning{hznu-thesis}{Failed to patch top float spacing}}%
+  \patchcmd{\@cflb}%
+    {\setbox\@tempboxa \vbox{}%
+    \@botlist}%
+    {\setbox\@tempboxa \vbox{}%
+    \global\hznu@tablefloatlistfalse
+    \@botlist}%
+    {}{\ClassWarning{hznu-thesis}{Failed to patch bottom float list reset}}%
+  \patchcmd{\@cflb}%
+    {\vskip \textfloatsep
+                             \botfigrule
+                             \unvbox\@tempboxa
+                             \vskip -\floatsep}%
+    {\vskip \hznu@floatlisttextsep
+                             \botfigrule
+                             \unvbox\@tempboxa
+                             \vskip -\hznu@lastfloatsep}%
+    {}{\ClassWarning{hznu-thesis}{Failed to patch bottom float spacing}}%
 }
 \setlength{\heavyrulewidth}{1.5pt}
 \setlength{\lightrulewidth}{0.5pt}
@@ -519,6 +660,7 @@
 \newenvironment{abbreviations}{%
   \hznu@frontchapter{缩略词表}%
   \songti\zihao{-4}\setstretch{1}%
+  \renewcommand{\hznutablearraystretch}{\hznutableabbrevarraystretch}%
   \begin{hznuthreelinetable}{%
     >{\centering\arraybackslash\hznutimes}p{0.16\textwidth}%
     >{\centering\arraybackslash\hznutimes}p{0.46\textwidth}%
