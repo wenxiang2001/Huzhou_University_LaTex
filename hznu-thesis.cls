@@ -259,24 +259,25 @@
 
 \captionsetup[table]{position=top,skip=6pt}
 
-% 图和普通浮动体使用这一组全局距离，避免三线表调距影响图片。
-\newcommand{\hznugeneralfloatsep}{1.5\baselineskip}
+% 浮动体距离以正文行高为准，避免表格五号字改变前后距。
+\newlength{\hznu@bodylinesep}
+\setlength{\hznu@bodylinesep}{20pt}
+\newcommand{\hznugeneralfloatsep}{1.5\hznu@bodylinesep}
 
-% 三线表距离控制：
-% 1. 页首距离：表格浮到页面顶部时，页眉线到表题之间的额外距离。
-% 2. 正文距离：正文与单个表格之间的距离。
-% 3. 表表距离：连续两个浮动表格之间的距离。
-\newcommand{\hznutablepagetopsep}{1.5\baselineskip}
-\newcommand{\hznutabletextsep}{3.5\baselineskip}
-\newcommand{\hznutabletablesep}{1.5\baselineskip}
+% 表格浮动体距离。模板要求每张表格前后空一行；表题上方和相邻
+% 表格之间使用 1.5 个正文行高，表格底部到正文使用 1 个正文行高。
+\def\fps@table{htbp}
+\newcommand{\hznutablepagetopsep}{\hznu@bodylinesep}
+\newcommand{\hznutabletextsep}{1.5\hznu@bodylinesep}
+\newcommand{\hznutableaftertextsep}{\hznu@bodylinesep}
+\newcommand{\hznutabletablesep}{1.5\hznu@bodylinesep}
 
-% 手动微调：放在 table 环境内部、\end{table} 之前才会随浮动体生效。
-% 用于表格后面紧接普通正文，允许正值或负值。
-\newcommand{\hznutablebelowtextsep}{-40pt}
-\newcommand{\hznutablefollowedbytext}{\vspace{\hznutablebelowtextsep}}
-% 用于表格后面紧接 chapter/section/subsection 等标题，允许正值或负值。
-\newcommand{\hznutablebelowheadingsep}{-50pt}
-\newcommand{\hznutablefollowedbyheading}{\vspace{\hznutablebelowheadingsep}}
+% 兼容旧模板。过去需要在 table 内写这些命令来抵消过大的表后距离；
+% 现在间距由浮动体参数统一处理，这两个命令保留为空操作以免旧文档报错。
+\newcommand{\hznutablebelowtextsep}{0pt}
+\newcommand{\hznutablefollowedbytext}{}
+\newcommand{\hznutablebelowheadingsep}{0pt}
+\newcommand{\hznutablefollowedbyheading}{}
 
 % 三线表内部行距。只影响表格内部，不影响表格与正文/页眉/其他表格的距离。
 \newcommand{\hznutablearraystretch}{1.2}
@@ -301,6 +302,7 @@
   \ifnum\@tempcnta=\numexpr\csname ftype@table\endcsname*32\relax #2\else #3\fi
 }
 \newcommand{\hznu@currfloattextsep}{\hznu@ifcurrtablefloat{\hznutabletextsep}{\intextsep}}
+\newcommand{\hznu@currfloataftertextsep}{\hznu@ifcurrtablefloat{\hznutableaftertextsep}{\intextsep}}
 \newcommand{\hznu@currfloatlistsep}[1]{%
   \hznu@ifcurrtablefloat
     {\ifx#1\@empty\hznutabletextsep\else\hznutabletablesep\fi}%
@@ -386,7 +388,8 @@
     {}{\ClassWarning{hznu-thesis}{Failed to patch in-text float required room}}%
   \patchcmd{\@addtocurcol}%
     {\global \advance \@textfloatsheight 2\intextsep}%
-    {\global \advance \@textfloatsheight 2\hznu@currfloattextsep}%
+    {\global \advance \@textfloatsheight \hznu@currfloattextsep
+     \global \advance \@textfloatsheight \hznu@currfloataftertextsep}%
     {}{\ClassWarning{hznu-thesis}{Failed to patch in-text float height}}%
   \patchcmd{\@addtocurcol}%
     {\vskip \intextsep
@@ -396,7 +399,7 @@
     {}{\ClassWarning{hznu-thesis}{Failed to patch in-text float before skip}}%
   \patchcmd{\@addtocurcol}%
     {\vskip\intextsep}%
-    {\vskip\hznu@currfloattextsep}%
+    {\vskip\hznu@currfloataftertextsep}%
     {}{\ClassWarning{hznu-thesis}{Failed to patch in-text float after skip}}%
   \patchcmd{\@cflt}%
     {\setbox\@tempboxa \vbox{}%
@@ -732,6 +735,10 @@
 
 \AtBeginDocument{%
   \hznubodyfont
+  \setlength{\hznu@bodylinesep}{\baselineskip}%
+  \setlength{\intextsep}{\hznugeneralfloatsep}%
+  \setlength{\textfloatsep}{\hznugeneralfloatsep}%
+  \setlength{\floatsep}{\hznugeneralfloatsep}%
   \hypersetup{
     pdfcreator={XeLaTeX with hznu-thesis class},
     pdfsubject={湖州师范大学硕士学位论文}

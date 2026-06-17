@@ -59,7 +59,7 @@ xelatex main.tex
 
 ## 三线表模板
 
-必须注意：正确的三线表必须使用 `hznuthreelinetable` 环境，并且表头单元格必须使用 `\hznutablehead{...}` 包裹；表格结束后必须保留 `\hznutablefollowedbyheading`，用于处理表格后紧跟标题时的间距。
+三线表使用 `hznuthreelinetable` 环境，表头单元格建议使用 `\hznutablehead{...}` 包裹。表格前后距离由类文件统一处理，正文中不需要额外添加表后间距命令。
 
 标准模板如下：
 
@@ -75,7 +75,6 @@ xelatex main.tex
     0.19 & 119 & 0.01 & 58.19 & 40.14\\
     \bottomrule
   \end{hznuthreelinetable}
-  \hznutablefollowedbyheading
 \end{table}
 ```
 
@@ -83,4 +82,3 @@ xelatex main.tex
 ## 写作建议
 
 建议用本项目完成论文初稿、公式、图表、引用和版本管理。定稿前请把内容迁移到学校要求的 Word 模板中，并逐项核对封面、目录、摘要、页眉页脚、图表题注、参考文献和附录等格式。
-
