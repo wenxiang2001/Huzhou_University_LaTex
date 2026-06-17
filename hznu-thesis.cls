@@ -8,6 +8,7 @@
   \ClassError{hznu-thesis}{This class must be compiled with XeLaTeX}{Use: xelatex main.tex}
 \fi
 
+\RequirePackage{makecell}
 \RequirePackage{geometry}
 \RequirePackage{fontspec}
 \RequirePackage{xeCJK}
@@ -280,7 +281,7 @@
 \newcommand{\hznutablefollowedbyheading}{}
 
 % 三线表内部行距。只影响表格内部，不影响表格与正文/页眉/其他表格的距离。
-\newcommand{\hznutablearraystretch}{1.2}
+\newcommand{\hznutablearraystretch}{1.35}
 \newcommand{\hznutableabbrevarraystretch}{2.0}
 \newcommand{\hznu@threelinetable@setup}{%
   \renewcommand{\arraystretch}{\hznutablearraystretch}%
