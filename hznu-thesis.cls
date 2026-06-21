@@ -257,7 +257,7 @@
   singlelinecheck=false
 }
 \captionsetup[figure]{position=bottom,skip=6pt}
-\setlength{\belowcaptionskip}{-16pt}
+\captionsetup[figure]{belowskip=-16pt}
 
 \captionsetup[table]{position=top,skip=6pt}
 
@@ -308,8 +308,20 @@
 \newcommand{\hznu@currfloataftertextsep}{\hznu@ifcurrtablefloat{\hznutableaftertextsep}{\intextsep}}
 \newcommand{\hznu@currfloatlistsep}[1]{%
   \hznu@ifcurrtablefloat
-    {\ifx#1\@empty\hznutabletextsep\else\hznutabletablesep\fi}%
-    {\ifx#1\@empty\textfloatsep\else\floatsep\fi}%
+    {%
+      \ifx#1\@empty
+        \ifnum\strcmp{\string#1}{\string\@toplist}=0
+          \dimexpr\hznutabletextsep+\hznutablepagetopsep\relax
+        \else
+          \hznutabletextsep
+        \fi
+      \else
+        \hznutabletablesep
+      \fi
+    }%
+    {%
+      \ifx#1\@empty\textfloatsep\else\floatsep\fi
+    }%
 }
 \newcommand{\hznu@floatlisttextsep}{%
   \ifhznu@tablefloatlist\hznutabletextsep\else\textfloatsep\fi
