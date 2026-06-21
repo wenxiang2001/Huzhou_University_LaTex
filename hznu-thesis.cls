@@ -266,11 +266,12 @@
 \setlength{\hznu@bodylinesep}{20pt}
 \newcommand{\hznugeneralfloatsep}{1.5\hznu@bodylinesep}
 
-% 表格浮动体距离。模板要求每张表格前后空一行；表题上方和相邻
-% 表格之间使用 1.5 个正文行高，表格底部到正文使用 1 个正文行高。
+% 表格浮动体距离。页顶表格不额外插入垂直空白：该空白若未计入
+% LaTeX 的浮动体高度，会挤占正文底部并导致页脚附近重叠。表格
+% 底部到正文保持一个正文行高，相邻表格之间使用 1.5 个正文行高。
 \def\fps@table{htbp}
 \newcommand{\hznutablepagetopsep}{\hznu@bodylinesep}
-\newcommand{\hznutabletextsep}{1.5\hznu@bodylinesep}
+\newcommand{\hznutabletextsep}{\hznu@bodylinesep}
 \newcommand{\hznutableaftertextsep}{0.5\hznu@bodylinesep}
 \newcommand{\hznutabletablesep}{1.5\hznu@bodylinesep}
 
@@ -617,7 +618,7 @@
   \end{center}
   \vspace{1em}
 
-  本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，也不包含为获得\underline{\textbf{湖州师范大学}}或其他教育机构的学位或证书而使用过的材料。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示谢意。
+  本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，也不包含为获得\underline{\textbf{\;湖州师范大学\;}}或其他教育机构的学位或证书而使用过的材料。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示谢意。
 
   \vspace{4em}
   \noindent\makebox[0.48\textwidth][l]{\textbf{论文作者签名：}}
@@ -628,7 +629,7 @@
     {\bfseries\zihao{3}湖州师范大学学位论文版权使用授权书}
   \end{center}
 
-  本学位论文作者完全了解\underline{\textbf{湖州师范大学}}有权保留并向国家有关部门或机构送交本论文的复印件和磁盘，允许论文被查阅和借阅。本人授权\underline{\textbf{湖州师范大学}}
+  本学位论文作者完全了解\underline{\textbf{\;湖州师范大学\;}}有权保留并向国家有关部门或机构送交本论文的复印件和磁盘，允许论文被查阅和借阅。本人授权\underline{\textbf{\;湖州师范大学\;}}
   可以将学位论文的全部或部分内容编入有关数据库进行检索和传播，可以采用影印、缩印或扫描等复制手段保存、汇编学位论文。
 
   本学位论文属于（请在以下相应方框内打“√”）
@@ -733,7 +734,7 @@
   \addcontentsline{toc}{chapter}{\bibname}%
   \markboth{\bibname}{\bibname}%
 }
-\bibliographystyle{gbt7714-numerical}
+\bibliographystyle{gbt7714-hznu-numerical}
 
 \AtBeginDocument{%
   \hznubodyfont
