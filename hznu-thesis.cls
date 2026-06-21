@@ -18,6 +18,7 @@
 \RequirePackage{tabularx}
 \RequirePackage{longtable}
 \RequirePackage{booktabs}
+\RequirePackage{multirow}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{caption}
@@ -163,14 +164,14 @@
   section={
     format=\raggedright\hznusectionfont,
     aftername=\hspace{1em},
-    beforeskip=0.5\baselineskip,
-    afterskip=0.1\baselineskip
+    beforeskip=0.3\baselineskip,
+    afterskip=0.3\baselineskip
   },
   subsection={
     format=\raggedright\hznusubsectionfont,
     aftername=\hspace{1em},
-    beforeskip=0.35\baselineskip,
-    afterskip=0.1\baselineskip
+    beforeskip=0.3\baselineskip,
+    afterskip=0.3\baselineskip
   }
 }
 
@@ -270,7 +271,7 @@
 \def\fps@table{htbp}
 \newcommand{\hznutablepagetopsep}{\hznu@bodylinesep}
 \newcommand{\hznutabletextsep}{1.5\hznu@bodylinesep}
-\newcommand{\hznutableaftertextsep}{\hznu@bodylinesep}
+\newcommand{\hznutableaftertextsep}{0.5\hznu@bodylinesep}
 \newcommand{\hznutabletablesep}{1.5\hznu@bodylinesep}
 
 % 兼容旧模板。过去需要在 table 内写这些命令来抵消过大的表后距离；
